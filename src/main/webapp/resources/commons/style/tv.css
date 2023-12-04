@@ -1,0 +1,260 @@
+/* 吏��� TV UIO */
+.tv-recommend{padding-top:15px}
+.tv-recommend.special{padding-top:20px;padding-bottom:10px}
+.tv-recommend:after{content:"clearfix";display:block;height:0;font-size:0;line-height:0;clear:both}
+.tv-recommend .sub-title{margin:0 0 17px;font-size:18px;font-family:'Malgun Gothic','留묒� 怨좊뵓',dotum,'�뗭�',sans-serif,'Segoe UI Symbol'}
+.tv-recommend .sub-title.second{margin:25px 0 13px}
+.sub-title.second a{display:inline-block;padding-right:14px;position:relative}
+.sub-title.second a:after{content:'';background:url("http://image.genie.co.kr/imageg/web/blt/more_4.gif") 0 0 no-repeat;width:6px;height:12px;position:absolute;top:50%;right:0;margin-top:-5px}
+.sub-title strong{color:#0096FF}
+
+.tv-recommend .bx-wrapper .bx-controls {position:absolute;right:0;top:-32px}
+.tv-recommend .bx-wrapper .bx-pager {display:block;bottom:auto;top:1px;right:75px;width:100px;color:#8b8b8b;text-align:right}
+.is-ie .tv-recommend .bx-wrapper .bx-pager {top:2px}
+.tv-recommend .bx-wrapper .bx-pager span {color:#444;font-weight:bold}
+.tv-recommend .bx-wrapper .bx-controls-direction a {display:inline-block;position:relative;top:auto;left:auto;right:auto;width:28px;height:28px;margin:-5px 2px 0 5px;border:0;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/recent_paging.png') no-repeat 0 0;text-indent:-9999px;vertical-align:top}
+.tv-recommend .bx-wrapper .bx-controls-direction .bx-next {background-position:-33px 0}
+.tv-recommend .bx-wrapper .bx-controls-auto {display:inline-block;position:relative;bottom:auto;right:auto;width:auto}
+.tv-recommend .bx-wrapper .bx-controls-auto .bx-start {display:none;width:28px;height:28px;margin:-5px 0 0 2px;border:0;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/recent_paging.png') transparent no-repeat -33px -33px;text-indent:-9999px;vertical-align:top}
+.tv-recommend .bx-wrapper .bx-controls-auto .bx-start.active {display:inline-block}
+.tv-recommend .bx-wrapper .bx-controls-auto .bx-stop {display:none;width:28px;height:28px;margin:-5px 0 0 2px;border:0;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/recent_paging.png') transparent no-repeat 0 -33px;text-indent:-9999px;vertical-align:top}
+.tv-recommend .bx-wrapper .bx-controls-auto .bx-stop.active {display:inline-block}
+.tv-recommend .swiper-play {display:block;position:absolute;top:-32px;right:0;width:28px;height:28px;margin:-5px 0 0 2px;border:0;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/recent_paging.png') transparent no-repeat 0 -33px;text-indent:-9999px;vertical-align:top}
+.tv-recommend .swiper-play.pause {background-position:-33px -33px}
+
+.tv-recommend .special-list{position: relative;zoom:1;overflow:hidden}
+.tv-recommend .special-list li{float: left;width: 346px}
+.tv-recommend .special-list li:first-child{margin-right:18px}
+.tv-recommend .special-list li:first-child .artist{display:none}
+.tv-recommend .special-list li h4{padding-left:53px;height:42px;position:relative;line-height:19px;padding-top: 4px;box-sizing: border-box;margin-bottom:13px}
+.tv-recommend .special-list li h4 strong{font-size:14px}
+.tv-recommend .special-list li h4 span{letter-spacing:-1px;font-size:12px;color:#969696;font-weight:400;white-space:nowrap;display:block;width:100%;overflow:hidden;text-overflow:ellipsis}
+.tv-recommend .special-list li h4 span:not(.cover){max-height:19px;overflow:hidden}
+.tv-recommend .special-list li h4 span > br{display:none}
+.tv-recommend .special-list li h4 .cover{width:42px;height:42px;position:absolute;top:0;left:0}
+.tv-recommend .special-list li h4 .cover:after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('//image.genie.co.kr/imageg/web/tv/cover_special.png') 0 0 no-repeat}
+.tv-recommend .special-list li .item{position:relative}
+.tv-recommend .special-list li .item .cover {position: relative;float: left;width:170px;height:96px}
+.tv-recommend .special-list li .item a.cover .mask{position:absolute;top:50%;left:50%;width:38px;height:28px;margin-left:-19px;margin-top:-14px;background:transparent url('//image.genie.co.kr/imageg/web/tv/cover_special_play.png') 0 0 no-repeat;display:none;z-index:10}
+.tv-recommend .special-list li .item a.cover:hover .mask,.tv-recommend .special-list li .item a.cover:focus .mask{display:block}
+.tv-recommend .special-list li .item .cover:after{content:'';position: absolute;top:0;right:0;bottom:0;left:0;background:transparent url('//image.genie.co.kr/imageg/web/tv/cover_special_item.png') 0 0 no-repeat}
+.tv-recommend .special-list li .item .cover img{width:100%}
+.tv-recommend .special-list li .item .info {box-sizing:border-box;overflow: hidden;padding:20px 10px 0 10px;vertical-align: top;height:96px;border: 1px solid #e5e5e5;border-left:0}
+.tv-recommend .special-list li .item .info .title{color: #27282d;font-size: 12px;font-weight: bold;line-height: 16px;text-align: left;display:block;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-wrap:break-word; max-height: 32px;}
+/*.tv-recommend .special-list li:first-child + li .item .info .title{max-height:32px;-webkit-line-clamp:2}*/
+
+.tv-recommend .special-list li .item .info .duration{display:inline-block;overflow:hidden;position:absolute;bottom:0;right:176px;height:16px;padding:2px 6px 0 5px;font-size:11px;background-color:#000;background:rgba(0,0,0,0.7);color:#fff}
+.tv-recommend .special-list li .item .info .artist{font-size:11px;color:#868686}
+.tv-recommend .special-list li .item .info .detail{display:inline-block;position:absolute;top:7px;right:8px;padding-right:10px;border:0;font-size:11px;background:transparent none;color:#969697;letter-spacing:-1px;background:url('//image.genie.co.kr/imageg/web/blt/more_3.gif') no-repeat 100% 2px}
+.tv-recommend .special-list li .item .info .like{display:inline-block;position:absolute;bottom:19px;left:180px;padding-left:15px;border:0;font-size:11px;background:transparent none;color:#999;background:url('//image.genie.co.kr/imageg/web/tv/bul_like_1904.png') no-repeat 0 2px;line-height: 14px;}
+.tv-recommend .special-list li .item .info .play_count{display:inline-block;position:absolute;bottom:19px;left:228px;padding-left:15px;border:0;font-size:11px;background:transparent none;color:#999;background:url('//image.genie.co.kr/imageg/web/tv/bul_play.png') no-repeat 0 2px;line-height: 14px;}
+
+.tv-recommend .special-list.clip li{width:auto;float:none;margin:0 !important;overflow:hidden;padding-top:26px}
+.tv-recommend .special-list.clip li:first-child{padding-top:6px}
+.tv-recommend .special-list.clip li .item{float: left;width:346px}
+.tv-recommend .special-list.clip li h4 + .item {margin-right:18px}
+
+/*  諛⑹넚/湲고� 異붿쿇 �곸긽 module */
+.tv-recommend.tv-recommend-broad{padding:19px 0 21px 0}
+.tv-recommend.tv-recommend-broad .info{min-height:90px;box-sizing: border-box}
+
+.special .artist > .face {position:absolute;top:0;left:0;overflow:hidden;width:34px;height:34px;display:inline-block;border-radius:50%;vertical-align:middle;margin-right:2px;background:url('//image.genie.co.kr/imageg/web/common/face_none.gif') 0 0 no-repeat}
+.special .artist > .face:after {content:'';position:absolute;top:0px;left:0;width:33px;height:33px;display:block;border-radius:50%;box-shadow:0px 0px 1px rgba(0,0,0,0.1) inset}
+.special .artist > .face > img {width:100%;height:100%;display:block}
+
+.songlist-box.music-tv{padding:31px 0 0 0;}
+.songlist-box.music-tv .body{border-top:solid 1px #eef1f4;}
+.music-tv .sub-title {display:inline-block;margin:15px 0 20px;font:bold 18px 'Malgun Gothic','留묒� 怨좊뵓',dotum,'�뗭�',sans-serif,'Segoe UI Symbol';color:#27282d;vertical-align:baseline}
+.songlist-box.music-tv .sub-title{margin-bottom:13px}
+.music-tv .tab {display:inline-block;margin:22px 0 0 8px;vertical-align:top}
+.is-ie .music-tv .tab {margin-left:6px}
+.music-tv .tab li{float:left}
+.music-tv .tab button{display:inline-block;padding:0 7px;border:0;background:transparent none;color:#8b8b8b}
+.music-tv .tab button.active{font-weight:bold;color:#0096FF}
+
+.songlist-sort .select-term {position:absolute; left:0; top:9px; padding-left:1px;}
+.songlist-sort .select-term:after {content:' '; display:block; visibility:hidden; clear:both;}
+.songlist-sort .select-term{display:inline-block;}
+.songlist-sort .select-term li {float:left; width:47px; height:22px; margin-left:-1px;}
+.songlist-sort .select-term li.realtime {width:59px;}
+.songlist-sort .select-term li a {display:block; position:relative; z-index:1; height:20px; border-top:1px solid #ccc; border-bottom:1px solid #ccc; background-image:url('//image.genie.co.kr/imageg/web/detail/bu_select_term.gif') !important; background-position:0 50%; background-repeat:no-repeat; background-color:#fafafa; color:#656565; font-size:11px; line-height:20px; text-align:center;}
+.songlist-sort .select-term li a:hover {color:#444; font-weight:bold;}
+.songlist-sort .select-term li.first a{border-left:1px solid #ccc; border-radius:3px 0 0 3px; background-image:none !important;}
+.songlist-sort .select-term li.last a{border-right:1px solid #ccc; border-radius:0 3px 3px 0;}
+.songlist-sort .select-term li a.current {z-index:2; border:1px solid #9c9c9c; background-image:none !important; background-color:#a5a5a5; box-shadow:inset 1px 1px 0 rgba(0,0,0,.05); color:#fff; font-weight:bold;}
+
+.songlist-sort{position:relative;overflow:hidden;height:34px}
+.songlist-sort .select-term + .this-type{float:right}
+.songlist-sort .this-type ul{padding-top:11px}
+.songlist-sort .this-type li:first-child{padding-left:0}
+.songlist-sort + .songlist-box.music-tv{padding-top:6px}
+
+.aside_hot_tv ul li .summary{max-width:173px}
+.aside_hot_tv .icon-box {display:inline-block;margin:1px 4px 0 0;font-size:11px;vertical-align:top;color:#8b8b8b;font-weight:normal;overflow:hidden;height:14px;padding:0 1px 0 2px;border:1px solid #8b8b8b;border-radius:2px;background:none transparent;line-height:15px;text-indent:0}
+.is-ie .aside_hot_tv .icon-box{line-height:17px}
+.aside_hot_tv .icon.icon-all,
+.aside_hot_tv .icon.icon-12,
+.aside_hot_tv .icon.icon-15,
+.aside_hot_tv .icon.icon-19{display: inline-block;overflow: hidden;height: 17px;margin: 0px 4px 0 0;padding: 0;font-size: 11px;font-weight: normal;background: url(//image.genie.co.kr/imageg/web/blt/list_190809.png) transparent no-repeat 0 0;vertical-align: top;color: #8b8b8b;line-height: 1.3;text-indent: -9999px}
+.aside_hot_tv .icon.icon-all{width:17px;background-position: -30px -129px}
+.aside_hot_tv .icon.icon-12{width:17px;background-position: -50px -129px}
+.aside_hot_tv .icon.icon-15{width:17px;background-position: -70px -129px}
+.aside_hot_tv .icon.icon-19{width:17px;background-position: -90px -129px}
+
+/* tv �뷀뀒�� */
+.tv_solid_view {padding-top: 5px; margin-bottom: 35px;font-family: 'Malgun Gothic', '留묒� 怨좊뵓', 'Nanum Gothic', '�섎닎 怨좊뵓', dotum, sans-serif;line-height:24px;margin-bottom:0}
+.tv_solid_view .main_title{font-size:18px;color:#27282d;padding:9px 210px 10px 0;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.tv_solid_view.tv_detail .main_title{margin-bottom:9px;min-height:24px}
+.tv_solid_view .main_title .icon {display:inline-block;overflow:hidden;height:17px;margin:7px 5px 0 0;padding:0;font-size:11px;font-weight:normal;background:url('//image.genie.co.kr/imageg/web/blt/list_180122.png') transparent no-repeat -38px -111px;vertical-align:top;color:#8b8b8b;line-height:1.3;text-indent:-9999px}
+.is-ie .tv_solid_view .main_title.icon {margin-top:1px}
+.tv_solid_view .main_title .icon-box {overflow:hidden;height:14px;padding:0 1px 0 2px;border:1px solid #8b8b8b;border-radius:3px;background:none transparent;line-height:14px;text-indent:0}
+.is-ie .tv_solid_view .main_title .icon-box {height:13px;margin-top:5px;padding-top:1px;line-height:11px}
+.tv_solid_view .main_title .point{color: #0eb6e6;font-weight: bold;vertical-align: baseline !important;}
+
+.tv_detail{border-bottom:solid 1px #dedede}
+.tv_detail .entry{position: relative;min-height:169px;padding:26px 0 20px 0;margin-left: -1px;box-sizing:border-box}
+.tv_detail .title {font-weight:bold;line-height:34px;padding-right:150px;font-size:0;}
+.tv_detail .title .txt{color: #27282d; font-size:24px;}
+.tv_detail .title .icon{display:inline-block;overflow:hidden;height:17px;margin:10px 5px 0 0;padding:0;font-size:11px;font-weight:normal;background:url('//image.genie.co.kr/imageg/web/blt/list_190809.png') transparent no-repeat -38px -111px;vertical-align:top;color:#8b8b8b;line-height:1.3;text-indent:-9999px}
+.tv_detail .title .icon.icon-all{width:17px;background-position: -30px -129px}
+.tv_detail .title .icon.icon-12{width:17px;background-position: -50px -129px}
+.tv_detail .title .icon.icon-15{width:17px;background-position: -70px -129px}
+.tv_detail .title .icon.icon-19{width:17px;background-position: -90px -129px}
+.tv_detail .info{font-size: 16px;font-weight: 400;vertical-align:top;padding:12px 0 2px 0}
+.tv_detail .info > span{position:relative}
+.tv_detail .info .info_album{padding-left:11px;margin-left:9px}
+.tv_detail .info .info_album:after{content:'';width:1px;height:14px;background-color: #e1e1e1;position:absolute;top:50%;left:0;margin-top:-7px; }
+
+
+
+.tv_detail .meta{padding:9px 0 4px 0}
+.tv_detail .meta dt {overflow:hidden}
+.tv_detail .meta dd.author {position:relative;padding-right:7px;margin-right:4px}
+.tv_detail .meta dd.author:after{content:'';width:1px;height:14px;background:#e1e1e1;position:absolute;top:6px;right:0}
+.tv_detail .meta dd {display:inline-block}
+.tv_detail .meta dd a{font-size:16px;color:#000000}
+
+.tv_detail .additional span.play_count{margin-left:9px}
+.tv_detail .tag{padding-top:8px;max-height:75px;overflow:hidden}
+.tv_detail .tag a{font-size:14px;display:inline-block;margin-right:14px;color:#000}
+.tv_detail .slink{line-height:18px;font-family:dotum;padding-top:23px;position: absolute;top: 8px;right: 0;}
+.tv_detail .slink .def-btn.bul{padding-right:20px;position:relative}
+.tv_detail .slink .def-btn.bul:after{content:'';background:url("//image.genie.co.kr/imageg/web/blt/bul_slink.png") 0 0 no-repeat;width:5px;height:7px;position:absolute;right:8px;top:50%;margin-top:-3px}
+
+.is-ie .tv_detail .sns-like .like,.is-ie .tv_detail .slink .def-btn.bul{line-height:26px;height:24px;box-sizing:border-box;padding-top:0;bottom:0}
+
+.detail-descript.tv_pre{margin-top:28px;padding-bottom:10px;position:relative}
+.detail-descript.tv_pre .desc-expand {position: absolute;right: 0;bottom:13px;}
+.detail-descript.tv_pre .desc-cont{height:62px}
+.detail-descript.tv_pre .desc-cont:after{bottom:-10px}
+.tv_pre pre{margin:6px 0 0 0}
+.tv_pre pre p{line-height:20px!important;white-space: pre-wrap;padding-right:100px}
+
+/* �뷀뀒�� check*/
+.artist-musicvideo.tv{padding:7px 0 15px 0}
+.artist-musicvideo.tv + .tv{padding-top:15px;padding-bottom:35px}
+.mv-type-2{padding-top:17px}
+.mv-type-2 .card-list{margin:0 -6px;width:952px!important}
+.mv-type-2 .card-list li{display:block;float:left;position:relative;width:226px;/*margin-left:16px*/margin:0 6px}
+.mv-type-2.special .card-list li{margin-bottom:20px}
+.mv-type-2 .card-list .cover {height:127px;position:relative}
+.mv-type-2 .card-list .cover .top {position:absolute;top:0;left:0;z-index:1;display: inline-block;padding:1px 3px 0;font-size: 11px;background-color: #ff5b62;color: #fff}
+.mv-type-2 .card-list .cover a{display:block;position:relative;height:100%}
+.mv-type-2 .card-list .cover a img {width:100%;height:100%}
+.mv-type-2 .card-list .cover a .mask{display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid #000;background:transparent none;opacity:0.1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=10)';filter:alpha(opacity=10);box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.mv-type-2 .card-list .cover a:hover .mask,.mv-type-2 .card-list .cover a:focus .mask{background:url('//image.genie.co.kr/imageg/web/tv/cover_el.png') no-repeat 0 0;opacity:1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';filter:alpha(opacity=100);border:0}
+.lt-ie9 .mv-type-2 .card-list .cover:after {z-index:10}
+.mv-type-2 .card-list .info {position:relative;/*height:94px;*/padding:15px 15px 7px 15px;border-right:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;;border-left:1px solid #e5e5e5;min-height:111px;box-sizing:border-box}
+.mv-type-2 .card-list .info .ic_etc {display:inline-block;overflow:hidden;height:13px;margin:0 4px 0 0;padding:1px 2px 0;border:1px solid #8b8b8b;border-radius:2px;color:#8b8b8b;font-size:12px;font-weight:normal;line-height:14px;letter-spacing:-1px;vertical-align:top;background:#fff;cursor:default}
+.mv-type-2 .card-list .info .ic_etc.impt {border-color:#0eb6e6;color:#0eb6e6}
+.mv-type-2 .card-list .info .detail{display:inline-block;position:absolute;top:16px;right:11px;padding-right:10px;border:0;font-size:11px;background:transparent none;color:#969697;letter-spacing:-1px;background:url('//image.genie.co.kr/imageg/web/blt/more_3.gif') no-repeat 100% 2px}
+.mv-type-2 .card-list .info .main{padding:8px 0 0 0}
+.mv-type-2 .card-list .info .main .title{display:block;font-size:12px;line-height:16px;font-weight:bold; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2;  -webkit-box-orient: vertical;  word-wrap:break-word;height:33px;margin-bottom:8px;margin-top:-2px;padding-top:2px}
+.mv-type-2 .card-list .info .main .title .icon.icon-19,
+.mv-type-2 .card-list .info .main .title .icon.icon-all,
+.mv-type-2 .card-list .info .main .title .icon.icon-12,
+.mv-type-2 .card-list .info .main .title .icon.icon-15{display:inline-block;overflow:hidden;height:17px;margin:-1px 4px 0 0;padding:0;font-size:11px;font-weight:normal;background:url('//image.genie.co.kr/imageg/web/blt/list_190809.png') transparent no-repeat -38px -111px;vertical-align:top;color:#8b8b8b;line-height:1.3;text-indent:-9999px}
+.mv-type-2 .card-list .info .main .title .icon.icon-all{width:17px;background-position: -30px -129px}
+.mv-type-2 .card-list .info .main .title .icon.icon-12{width:17px;background-position: -50px -129px}
+.mv-type-2 .card-list .info .main .title .icon.icon-15{width:17px;background-position: -70px -129px}
+.mv-type-2 .card-list .info .main .title .icon.icon-19{width:17px;background-position: -90px -129px}
+.mv-type-2.special .card-list .info .main .title{margin-bottom:15px}
+.mv-type-2 .card-list .info .main .artist{font-size:11px;color:#969697;display:inline-block;padding-bottom:3px}
+.mv-type-2 .card-list .info .main .duration{display:inline-block;overflow:hidden;position:absolute;top:-18px;right:-1px;height:16px;padding:2px 6px 0 5px;font-size:11px;background-color:#000;background:rgba(0,0,0,0.7);color:#fff}
+
+.owl-item:not(.center) > div:hover {opacity: .75}
+.wrap_tab_tv{overflow: hidden;margin:0 auto;position:relative;padding-top:15px}
+.wrap_tab_tv .sub-title {margin: 0 0 17px;font-size: 18px;font-family: 'Malgun Gothic','占쏙옙占쏙옙 占쏙옙占�',dotum,'占쏙옙占쏙옙',sans-serif,'Segoe UI Symbol';}
+
+/* 占쏙옙占쏙옙TV 占쏙옙천 占쏙옙占싸그뤄옙 */
+.tv_program{width:100%; height:130px; visibility:hidden; margin:0 auto 17px;}
+.tv_program .bx-wrapper{width:627px; margin:auto;}
+.tv_program .bx-viewport{height:130px!important;}
+.tv_program ul{width:860px;}
+.tv_program ul:after{content:''; display:block; clear:both;}
+.tv_program ul li{text-align:center;}
+.tv_program ul li:first-child{margin-right:21px!important;}
+.tv_program ul li .item{position:relative; display:inline-block; width:90px; text-align:center;}
+.tv_program ul li .item:before{content:''; display:inline-block; width:90px; height:90px; position:absolute; top:0; left:50%; margin-left:-45px; background:url("//image.genie.co.kr/imageg/web/tv/cover_broad.png") 0 0 no-repeat; z-index:1;}
+.tv_program ul li .item.selected:after{content:''; display:inline-block; width:84px; height:84px; border-radius:50%; position:absolute; top:1px; left:1px; background:none; border:2px solid #0096FF; z-index:2}
+.tv_program ul li .item img{width:80px; height:80px; margin:4px auto 13px;}
+.tv_program ul li .item strong{color:#969697; font-weight:400; letter-spacing:-1px; line-height:16px; text-overflow:ellipsis; word-break:keep-all;  overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-wrap:break-word; margin:0 auto;}
+.tv_program ul li .item.selected strong{font-weight:700; color:#0096FF;}
+.ico_home{display:inline-block; width:24px; height:24px; background:url("//image.genie.co.kr/imageg/web/tv/ico_home.png") no-repeat; font-size:0; position:absolute; top:60px; right:4px; z-index:3;}
+.tv_program ul li .item.selected .ico_home{right:0;}
+.tv_program .bx-wrapper .bx-controls-direction a.bx-prev,
+.tv_program .bx-wrapper .bx-controls-direction a.bx-next{width:26px; height:44px; background:url("//image.genie.co.kr/imageg/web/tv/tv_arrow.png") 0 0 no-repeat; top:38px; font-size:0; opacity:0.8; z-index:2;}
+.tv_program .bx-wrapper .bx-controls-direction a.bx-prev{left:-43px;}
+.tv_program .bx-wrapper .bx-controls-direction a.bx-next{right:-43px; background-position:-26px 0;}
+.tv_program .bx-wrapper .bx-controls-direction a.disabled{display:block; background-position:0 -44px; opacity:0.5;}
+.tv_program .bx-wrapper .bx-controls-direction a.disabled.bx-next{background-position:-26px -44px;}
+
+.wrap_tab_tv .contents{border-top:solid 1px #dedede;margin-top:-1px}
+
+.broad_content .broad_desc{display:block;padding:13px 0 21px 0}
+.broad_content .broad_desc .sub-title{margin: 0 0 17px;font-size: 18px;font-family: 'Malgun Gothic','留묒� 怨좊뵓',dotum,'�뗭�',sans-serif,'Segoe UI Symbol';}
+.broad_content .broad_desc .inner{padding:45px 240px 65px 31px;box-sizing:border-box;min-height:236px;background-size:710px 236px!important;position:relative;background-color: #5380e7;line-height: 20px;word-break: keep-all;background-image: url("//image.genie.co.kr/imageg/web/tv/bg_broad_default.jpg");background-repeat: no-repeat}
+.broad_content .broad_desc .inner .expend_area{overflow:hidden;height:103px}
+.broad_content .broad_desc .inner .expend {display:inline-block;line-height:17px; padding:0; color:#999;margin-top: 5px;}
+.broad_content .broad_desc .inner .expend span {display:inline-block; line-height:17px; font-size:11px; padding-right:15px;position:relative;}
+.broad_content .broad_desc .inner .expend span:after{content:'';position:absolute;right:0;width:9px;height:100%;background:url('//image.genie.co.kr/imageg/web/blt/more_down_wh.gif') no-repeat 100% center;}
+.broad_content .broad_desc .inner .expend.open span:after{transform: rotate(180deg);-webkit-transform: rotate(180deg);top:-1px}
+.broad_content .broad_desc .inner span{display:block;color:#fff;font-size:12px;line-height:20px;opacity:0.6;word-break:break-all;}
+.broad_content .broad_desc .inner strong{font-size:16px;line-height:24px;margin-bottom:16px;max-height:48px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;word-break:break-all;display:block}
+.broad_content .broad_desc .inner span.long{height:127px;}
+.broad_content .broad_desc .more{color: #ffffff;font-family: Dotum;font-size: 11px;font-weight: 400;background:url('//image.genie.co.kr/imageg/web/tv/broad_arrow.png') right 4px no-repeat;padding-right: 10px;position: absolute;bottom: 32px;left:31px;}
+.broad_content .broad_desc .inner strong,
+.broad_content .broad_desc .inner em{color:#fff;font-style:normal;word-break:break-all;}
+
+.sub-link{overflow:hidden;border-top:2px solid #656565;border-bottom:1px solid #dedede;}
+.sub-link .sub-link__list{display:block;padding:8px 0 6px;max-height:73px;overflow: hidden;}
+.sub-link .sub-link__list:after{content:'';display:block;clear:both;height:0;}
+.sub-link .sub-link__list li{position:relative;float:left;width:25%;line-height:1.5;}
+.sub-link .sub-link__list li:before{content:'';display:block;position:absolute;top:6px;left:-1px;width:1px;height:11px;background-color:#d6d6d6;}
+.sub-link .sub-link__list a{display:block;margin:0 10px;padding:3px 0 4px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.sub-link .sub-link__list a.active{font-weight:bold;}
+
+.top-title{height:28px;position:relative;padding:20px 0 0 0;margin-bottom:6px}
+.top-title h2.logo_mnet {height:21px;line-height:19px;background:url('//image.genie.co.kr/imageg/web/tv/logo_mnet.png') 0 center no-repeat; padding-left:50px; margin: 0 0 17px;font-size: 18px;font-family: 'Malgun Gothic','占쏙옙占쏙옙 占쏙옙占�',dotum,'占쏙옙占쏙옙',sans-serif,'Segoe UI Symbol';}
+.top-title h2.logo_mnet > span {font-size:0;}
+.top-title .top-title__outlink{font-family: Dotum;font-size: 11px;font-weight: 400;letter-spacing: -0.82px;line-height: 43px;color: #999999;letter-spacing: -0.33px;line-height: 28px;position:absolute;right:0;bottom:-4px}
+
+.program_all{position:relative;zoom:1;overflow:hidden;padding-bottom:30px;border-top: solid 1px #eef1f4;}
+.program_all li{float:left;width:50%;height:92px;margin:0!important;overflow:hidden;border-bottom:solid 1px #eef1f4;box-sizing: border-box;}
+.program_all li:first-child{margin-right:18px;}
+.program_all li a{position:relative;line-height:21px;box-sizing:border-box;display:block;padding:26px 0 23px 90px;}
+.program_all li strong{font-size:14px;}
+.program_all li .desc{letter-spacing:-1px;font-size:12px;color:#969696;font-weight:400;white-space:nowrap;display:block;width:100%;overflow:hidden;text-overflow:ellipsis;}
+.program_all li .cover{width:72px;height:72px;position:absolute;top:10px;left:0;border-radius:50%;overflow:hidden}
+.program_all li .cover:after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border-radius:50%;box-shadow: 0px 0px 1px rgba(0,0,0,0.2) inset;}
+.program_all li a .ico_home{top:58px;left:48px;}
+.program_all .icon-box {display: inline-block;margin: 2px 4px 0 0;font-size: 11px;vertical-align: top;font-weight: normal;overflow: hidden;height: 14px;padding: 0 1px 0 2px;border: 1px solid #0eb6e6;border-radius: 2px;background: none transparent;line-height: 15px;text-indent: 0;color: #0eb6e6;}
+.program_all .icon-box.off {border-color:#8b8b8b;color: #8b8b8b;}
+
+/* tv banner */
+.aside-tvbanner-zone a{display:block; height:48px; padding:0 15px; margin:15px auto 0; box-sizing:border-box; clear:both;}
+.aside-tvbanner-zone a > img{float:left; margin-right:10px;}
+.aside-tvbanner-zone a dl{padding:5px 0;}
+.aside-tvbanner-zone a dt, .aside-tvbanner-zone a dd{font-size:12px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.aside-tvbanner-zone a dt{color:#444; font-weight:bold;}
+.aside-tvbanner-zone a dd{color:#999; padding-top:4px;}

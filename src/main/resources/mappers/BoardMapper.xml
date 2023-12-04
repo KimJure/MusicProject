@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace = "kr.co.dong.BoardMapper">
+	
+	   <!-- `````````````````````````````````````` login/join관련 ```````````````````````````````````````` -->
+	   
+	<insert id="joinMember" parameterType="memberDTO">
+	  insert into member (id, pw, name, email, domain, tel, ticketadate, joindate, state, authority, agree, agree1, nickname, passnum, customer, naver_id)
+	  values (#{id}, #{pw}, #{name}, #{email}, #{domain}, #{tel}, 0, 
+	          curdate(), 1, 1, #{agree}, #{agree1}, #{nickname}, 1, CONCAT('cushion', LPAD(FLOOR(POW(10, 10) * RAND()), 10, '0', '0')))
+	</insert>
+	
+	<select id="joinSuc" parameterType="memberDTO" resultMap="memberMap">
+	
+	 SELECT * FROM member WHERE membernum = (SELECT MAX(membernum) FROM member);
+
+	</select>
+	
+	<select id="nicknameCheck" parameterType="memberDTO" resultType="java.lang.Integer">
+	
+	 select count(*)
+		from member
+		where nickname = #{nickname};
+
+	</select>
+	
+		<select id="idCheck" parameterType="memberDTO" resultType="java.lang.Integer">
+	
+	 select count(*)
+		from member
+		where id = #{id};
+
+	</select>
+	
+	   <select id="login" resultType="java.util.Map" parameterType="java.util.Map">
+SELECT M.id, M.pw, M.authority, M.state, M.nickname, M.name, M.email, M.domain, M.tel, P.passnum, P.passname, M.membernum, M.customer, Pro.profileurl, Pro.profilename
+FROM Member AS M
+JOIN pass AS P ON M.passnum = P.passnum
+Join profile as Pro on M.membernum = Pro.membernum
+WHERE M.id = #{id} and Pro.profilestate = 1;
+   </select>
+   
+   	   <select id="NaverLogin" resultType="java.util.Map" parameterType="java.util.Map">
+SELECT M.id, M.pw, M.authority, M.state, M.nickname, M.name, M.email, M.domain, M.tel, P.passnum, P.passname, M.membernum, M.customer, Pro.profileurl, Pro.profilename
+FROM Member AS M
+JOIN pass AS P ON M.passnum = P.passnum
+Join profile as Pro on M.membernum = Pro.membernum
+WHERE M.naver_id = #{naver_id} and Pro.profilestate = 1;
+   </select>
+
+  <select id="pwCheck" resultType="java.lang.String" parameterType="memberDTO">
+    select pw from member where id = #{id}; 
+</select>
+
+  <select id="NaverLinkCheck" resultType="java.lang.Integer" parameterType="memberDTO">
+  
+    	 select count(*)
+		from member
+		where naver_id = #{naver_id};
+</select>
+
+	<update id="NaverLinkOn" parameterType="map">
+	  update member
+	  set naver_id = #{naver_id}
+	  where id =  #{id};
+	</update>
+
+<!-- `````````````````````````````````````` 패스 관련 ```````````````````````````````````````` -->
+
+<select id="passName"  resultMap="passMap">
+SELECT *
+FROM pass
+WHERE passnum = #{passnum};
+</select>
+
+<update id="paySuccess" parameterType="memberDTO">
+update member
+set ticketadate = #{ticketadate},
+	ticketdate = 30,
+	passnum = #{passnum}
+	 
+where membernum = #{membernum};
+</update>
+
+<update id="passRenewal" parameterType="memberDTO">
+UPDATE member
+SET ticketdate = ticketdate - 1, ticketadate = ticketadate - 1
+WHERE ticketdate > 0;
+</update>
+
+
+<select id="daysCheck"  resultMap="memberMap">
+SELECT M.name, M.email, M.domain, M.tel, P.passnum, P.passname, P.passexplan, P.passpay, M.membernum, M.customer
+FROM Member AS M
+JOIN pass AS P ON M.passnum = P.passnum
+WHERE M.ticketdate = 0 and M.ticketadate > 0;
+</select>
+
+<!-- `````````````````````````````````````` 차트 관련 ```````````````````````````````````````` -->
+
+<select id="realtime"  resultMap="realtimeMap">
+SELECT
+    ROW_NUMBER() OVER (ORDER BY s.realtimect DESC) AS songrating,
+    s.*,
+    a.*,
+    i.*,
+    at.*
+FROM
+    song s
+INNER JOIN
+    album a ON s.albumnum = a.albumnum
+INNER JOIN
+    img i ON a.albumnum = i.albumnum
+INNER JOIN
+    artist at ON a.artistnum = at.artistnum
+ORDER BY s.realtimect DESC;
+</select>
+
+<select id="ArtistInfo"  resultMap="ArtistInfoMap">
+    SELECT *
+FROM artist
+JOIN img ON artist.artistnum = img.artistnum;
+</select>
+
+<select id="ArtistmInfo"  resultMap="ArtistmInfoMap">
+SELECT *
+FROM artistm
+JOIN img ON artistm.artistnum_m = img.artistnum_m;
+</select>
+
+<select id="albumInfo"  resultMap="albumInfoMap">
+SELECT album.*, img.*, COUNT(song.songnum) AS songcount
+FROM album
+JOIN song ON album.albumnum = song.albumnum
+JOIN img ON album.albumnum = img.albumnum
+GROUP BY album.albumnum, img.imgnum;
+</select>
+
+<select id="albumcount"  resultMap="albumcountMap">
+SELECT COUNT(*) AS albumcount
+FROM album
+WHERE albumnum = 1;
+</select>
+
+<select id="songbest"  resultMap="bestsongMap">
+SELECT
+    ROW_NUMBER() OVER (ORDER BY s.realtimect DESC) AS songrating,
+    s.songname,
+    al.albumname, al.albumnum,
+    a.artistname,
+    i.url,i.imgname,i.albumnum,
+    COUNT(*) OVER () AS bestsongcount
+FROM
+    artist a
+    JOIN album al ON a.artistnum = al.artistnum
+    JOIN song s ON al.albumnum = s.albumnum
+    join img i on i.albumnum = al.albumnum
+WHERE
+    a.artistnum = #{artistnum}
+LIMIT 10;
+</select>
+
+
+
+<!-- `````````````````````````````````````` 댓글 관련 ```````````````````````````````````````` -->
+
+	<insert id="commentSuccess" parameterType="commentDTO">
+	  insert into comment (membernum, artistnum, ccontent, cdate, comlike, comreport, comdel, combad, comnickname,c_nowdate)
+	  values (#{membernum}, #{artistnum}, #{ccontent}, curdate(), 0, 0, 1, 0, #{comnickname},now())
+	</insert>
+	
+	<select id="commentList" resultMap="commentListMap">
+SELECT c.*
+FROM comment AS c
+INNER JOIN member AS m ON c.membernum = m.membernum
+where artistnum = #{artistnum}
+order by c.cdate asc;
+</select>
+
+<select id="replyList" resultMap="replyListMap">
+SELECT r.* , r.membernum as r_membernum
+FROM reply r
+INNER JOIN member m ON r.membernum = m.membernum
+order by r.rdate desc;
+</select>
+
+	<insert id="replySuccess" parameterType="replyDTO">
+	  insert into comment (comnum, rcontent, rdate, relike, rereport, redel, rebad, renickname,r_nowdate)
+	  values (#{comnum}, #{rcontent}, curdate(), 0, 0, 1, 0, #{renickname},now())
+	</insert>
+
+	<!-- `````````````````````````````````````` 리절트맵 관련 ```````````````````````````````````````` -->
+  <resultMap id="memberMap" type="kr.co.dong.DTO.memberDTO">
+    <result property="membernum" column="membernum" />
+  <result property="id" column="id" />
+  <result property="pw" column="pw" />
+    <result property="name" column="name" />
+  <result property="email" column="email" />
+  <result property="domain" column="domain" />
+    <result property="tel" column="tel" />
+  <result property="ticketadate" column="ticketpe" />
+  <result property="customer" column="customer" />
+  <result property="passnum" column="passnum" />
+    <result property="joindate" column="joindate" />
+    <result property="ticketdate" column="joindate" />
+  <result property="state" column="state" />
+  <result property="authority" column="authority" />
+    <result property="identity" column="identity" />
+  <result property="agree" column="agree" />
+  <result property="agree1" column="agree1" />
+    <result property="nickname" column="nickname" />
+    <result property="naver_id" column="naver_id" />
+    <result property="kakao_id" column="kakao_id" />
+  </resultMap>
+  
+  
+  
+  <resultMap id="passMap" type="kr.co.dong.DTO.passDTO">
+  <result property="passnum" column="passnum" />
+  <result property="passname" column="passname" />
+  <result property="passexplan" column="passexplan" />
+  <result property="passpay" column="passpay" />
+  <result property="passprice" column="passpay" />
+  <result property="passdate" column="passdate" />
+  </resultMap>
+    
+    <resultMap id="songMap" type="kr.co.dong.DTO.songDTO">
+    <result property="songnum" column="songnum"/>
+  <result property="songname" column="songname" />
+  <result property="albumnum" column="albumnum" />
+  <result property="songgenre" column="songgenre" />
+  <result property="songstyle" column="songstyle" />
+  <result property="songlike" column="songlike" />
+ <result property="title" column="title" />
+ <result property="realtimect" column="realtimect" />
+ <result property="dailyct" column="dailyct" />
+ <result property="weeklyct" column="weeklyct" />
+ <result property="monthlyct" column="monthlyct" />
+ <result property="acc" column="acc" />
+ <result property="lyrics" column="lyrics" /> 
+ </resultMap>
+ 
+ <resultMap id="artistMap" type="kr.co.dong.DTO.artistDTO">
+   <result property="artistnum" column="artistnum" />
+   <result property="artclick" column="artclick" />
+   <result property="artistname" column="artistname" />
+  <result property="debutyear" column="debutyear" />
+    <result property="activity" column="activity" />
+     <result property="artagency" column="artagency" />
+      <result property="artintro" column="artintro" />
+       <result property="activityyear" column="activityyear" />
+  <result property="artlike" column="artlike" />
+ <result property="artgender" column="artgender" />
+ <result property="artgroup" column="artgroup" />
+ <result property="artnational" column="artnational" />
+ <result property="arttype" column="arttype" />
+</resultMap>
+
+ <resultMap id="artistmMap" type="kr.co.dong.DTO.artistmDTO">
+   <result property="artistnum_m" column="artistnum_m" />
+   <result property="artclick_m" column="artclick_m" />
+   <result property="artistname_m" column="artistname_m" />
+  <result property="debutyear_m" column="debutyear_m" />
+    <result property="activity_m" column="activity_m" />
+     <result property="artagency_m" column="artagency_m" />
+      <result property="artintro_m" column="artintro_m" />
+       <result property="activityyear_m" column="activityyear_m" />
+  <result property="artlike_m" column="artlike_m" />
+ <result property="artgender_m" column="artgender_m" />
+ <result property="artgroup_m" column="artgroup_m" />
+ <result property="artnational_m" column="artnational_m" />
+ <result property="arttype_m" column="arttype_m" />
+</resultMap>
+
+<resultMap id="albumMap" type="kr.co.dong.DTO.albumDTO">
+   <result property="albumnum" column="albumnum" />
+   <result property="artistnum" column="artistnum" />
+    <result property="albumname" column="albumname" />
+  <result property="category" column="category" />
+  <result property="domestic" column="domestic" />
+   <result property="releasedate" column="releasedate" />
+  <result property="genre" column="genre" />
+ <result property="style" column="style" />
+ <result property="publisher" column="publisher" />
+ <result property="albumlike" column="albumlike" />
+ <result property="albumtext" column="albumtext" />
+ <result property="agency" column="agency" />
+  </resultMap>
+  
+  <resultMap id="imgMap" type="kr.co.dong.DTO.imgDTO">
+   <result property="imgnum" column="imgnum" />
+   <result property="albumnum" column="albumnum" />
+    <result property="artistnum" column="artistnum" />
+  <result property="url" column="url" />
+  <result property="imgname" column="imgname" />
+    <result property="m_url" column="m_url" />
+  <result property="m_imgname" column="m_imgname" />
+  </resultMap>
+  
+    <resultMap id="profileMap" type="kr.co.dong.DTO.profileDTO">
+   <result property="profilenum" column="profilenum" />
+   <result property="profileurl" column="profileurl" />
+    <result property="profilename" column="profilename" />
+  <result property="profilestate" column="profilestate" />
+  <result property="membernum" column="membernum" />
+
+  </resultMap>
+  
+    <resultMap id="commentMap" type="kr.co.dong.DTO.commentDTO">
+   <result property="comnum" column="comnum" />
+   <result property="albumnum" column="albumnum" />
+    <result property="artistnum" column="artistnum" />
+  <result property="albumnum" column="albumnum" />
+  <result property="songnum" column="songnum" />
+    <result property="ccontent" column="ccontent" />
+  <result property="cdate" column="cdate" />
+  <result property="comlike" column="comlike" />
+  <result property="combad" column="combad" />
+  <result property="comreport" column="comreport" />
+  <result property="comdel" column="comdel" />
+  <result property="comnickname" column="comnickname" />
+  <result property="c_membernum" column="c_membernum" />
+  </resultMap>
+  
+      <resultMap id="replyMap" type="kr.co.dong.DTO.replyDTO">
+      <result property="replynum" column="replynum" />
+   <result property="comnum" column="comnum" />
+   <result property="membernum" column="membernum" />
+    <result property="rcontent" column="rcontent" />
+  <result property="rdate" column="rdate" />
+  <result property="relike" column="relike" />
+  <result property="rebad" column="rebad" />
+  <result property="rereport" column="rereport" />
+  <result property="redel" column="redel" />
+  <result property="renickname" column="renickname" />
+  <result property="r_membernum" column="r_membernum" />
+  <result property="r_comnum" column="r_comnum" />
+  </resultMap>
+  
+      <resultMap id="realtimeMap" type="kr.co.dong.DTO.songDTO">
+    <result property="songnum" column="songnum"/>
+  <result property="songname" column="songname" />
+  <result property="albumnum" column="albumnum" />
+  <result property="songgenre" column="songgenre" />
+  <result property="songstyle" column="songstyle" />
+  <result property="songlike" column="songlike" />
+ <result property="title" column="title" />
+ <result property="realtimect" column="realtimect" />
+ <result property="dailyct" column="dailyct" />
+ <result property="weeklyct" column="weeklyct" />
+ <result property="monthlyct" column="monthlyct" />
+ <result property="acc" column="acc" />
+ <result property="lyrics" column="lyrics" /> 
+ <result property="songrating" column="songrating" />
+	<collection property="albumDTO" resultMap="albumMap"></collection>
+	<collection property="artistDTO" resultMap="artistMap"></collection>
+	<collection property="imgDTO" resultMap="imgMap"></collection>
+  </resultMap>
+  
+        <resultMap id="ArtistInfoMap" type="kr.co.dong.DTO.artistDTO">
+   <result property="artistnum" column="artistnum" />
+   <result property="artclick" column="artclick" />
+   <result property="artistname" column="artistname" />
+  <result property="debutyear" column="debutyear" />
+    <result property="activity" column="activity" />
+     <result property="artagency" column="artagency" />
+      <result property="artintro" column="artintro" />
+       <result property="activityyear" column="activityyear" />
+  <result property="artlike" column="artlike" />
+ <result property="artgender" column="artgender" />
+ <result property="artgroup" column="artgroup" />
+ <result property="artnational" column="artnational" />
+ <result property="arttype" column="arttype" />
+ <collection property="artistmDTO" resultMap="artistmMap"></collection>
+	<collection property="imgDTO" resultMap="imgMap"></collection>
+	</resultMap>
+	
+	       <resultMap id="ArtistmInfoMap" type="kr.co.dong.DTO.artistmDTO">
+   <result property="artistnum_m" column="artistnum_m" />
+   <result property="artclick_m" column="artclick_m" />
+   <result property="artistname_m" column="artistname_m" />
+  <result property="debutyear_m" column="debutyear_m" />
+    <result property="activity_m" column="activity_m" />
+     <result property="artagency_m" column="artagency_m" />
+      <result property="artintro_m" column="artintro_m" />
+       <result property="activityyear_m" column="activityyear_m" />
+  <result property="artlike_m" column="artlike_m" />
+ <result property="artgender_m" column="artgender_m" />
+ <result property="artgroup_m" column="artgroup_m" />
+ <result property="artnational_m" column="artnational_m" />
+ <result property="arttype_m" column="arttype_m" />
+	<collection property="imgDTO" resultMap="imgMap"></collection>
+  </resultMap>
+  
+  	       <resultMap id="albumInfoMap" type="kr.co.dong.DTO.albumDTO">
+   <result property="albumnum" column="albumnum" />
+   <result property="artistnum" column="artistnum" />
+    <result property="albumname" column="albumname" />
+  <result property="category" column="category" />
+  <result property="domestic" column="domestic" />
+   <result property="releasedate" column="releasedate" />
+  <result property="genre" column="genre" />
+ <result property="style" column="style" />
+ <result property="publisher" column="publisher" />
+ <result property="albumlike" column="albumlike" />
+ <result property="albumtext" column="albumtext" />
+ <result property="agency" column="agency" />
+ <result property="songcount" column="songcount" />
+ <collection property="songDTO" resultMap="songMap"></collection>
+	<collection property="imgDTO" resultMap="imgMap"></collection>
+  </resultMap>
+  
+   	       <resultMap id="albumcountMap" type="kr.co.dong.DTO.albumDTO">
+   <result property="albumnum" column="albumnum" />
+   <result property="albumcount" column="albumcount" />
+   </resultMap>
+   
+      <resultMap id="bestsongMap" type="kr.co.dong.DTO.artistDTO">
+   <result property="artistnum" column="artistnum" />
+   <result property="artclick" column="artclick" />
+   <result property="artistname" column="artistname" />
+  <result property="debutyear" column="debutyear" />
+    <result property="activity" column="activity" />
+     <result property="artagency" column="artagency" />
+      <result property="artintro" column="artintro" />
+       <result property="activityyear" column="activityyear" />
+  <result property="artlike" column="artlike" />
+ <result property="artgender" column="artgender" />
+ <result property="artgroup" column="artgroup" />
+ <result property="artnational" column="artnational" />
+ <result property="arttype" column="arttype" />
+ <result property="bestsongcount" column="bestsongcount" />
+ <result property="songrating" column="songrating" />
+  <collection property="imgDTO" resultMap="imgMap"></collection>
+  <collection property="songDTO" resultMap="songMap"></collection>
+  <collection property="albumDTO" resultMap="albumMap"></collection>
+   </resultMap>
+   
+         <resultMap id="commentListMap" type="kr.co.dong.DTO.commentDTO">
+   <result property="comnum" column="comnum" />
+   <result property="albumnum" column="albumnum" />
+    <result property="artistnum" column="artistnum" />
+  <result property="albumnum" column="albumnum" />
+  <result property="songnum" column="songnum" />
+    <result property="ccontent" column="ccontent" />
+  <result property="cdate" column="cdate" />
+  <result property="comlike" column="comlike" />
+  <result property="combad" column="combad" />
+  <result property="comreport" column="comreport" />
+  <result property="comdel" column="comdel" />
+  <result property="comnickname" column="comnickname" />
+    <result property="c_membernum" column="c_membernum" />
+  <collection property="memberDTO" resultMap="memberMap"></collection>
+  <collection property="replyDTO" resultMap="replyMap"></collection>
+   </resultMap>
+   
+            <resultMap id="replyListMap" type="kr.co.dong.DTO.replyDTO">
+      <result property="replynum" column="replynum" />
+   <result property="comnum" column="comnum" />
+   <result property="membernum" column="membernum" />
+    <result property="rcontent" column="rcontent" />
+  <result property="rdate" column="rdate" />
+  <result property="relike" column="relike" />
+  <result property="rebad" column="rebad" />
+  <result property="rereport" column="rereport" />
+  <result property="redel" column="redel" />
+  <result property="renickname" column="renickname" />
+    <result property="r_membernum" column="r_membernum" />
+    <result property="r_comnum" column="r_comnum" />
+  <collection property="memberDTO" resultMap="memberMap"></collection>
+   </resultMap>
+  
+</mapper>

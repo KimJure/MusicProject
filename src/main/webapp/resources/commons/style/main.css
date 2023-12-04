@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+#wrap-body {width:100%;padding-bottom:100px}
+#body-content {padding-bottom:0}
+.sub-title {display:inline-block;margin:15px 0 15px;font:bold 18px 'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif,'Segoe UI Symbol';color:#27282d;vertical-align:baseline}
+#body-content .tab {display:inline-block;margin:23px 0 0 8px;vertical-align:top}
+.is-ie #body-content .tab {margin-left:6px}
+#body-content .tab li {float:left}
+#body-content .tab button {display:inline-block;padding:0 8px;border:0;background:transparent none;color:#8b8b8b}
+#body-content .tab button.active {font-weight:bold;color:#0096FF}
+
+.recent-music {position:relative;width:942px;margin:0 auto;padding-bottom:314px}
+.recent-music .sub-title {padding-left:1px}
+.recent-music .slide-wrapper {visibility:hidden;overflow:hidden;position:absolute;top:54px;left:0;width:100%;height:314px}
+.recent-music .slide-wrapper.active {visibility:visible;overflow:visible}
+.recent-music .list-album li {display:block;overflow:hidden;float:left;position:relative;width:151px;height:151px;margin:0 3px 6px}
+.recent-music .list-album li:hover {overflow:visible}
+.recent-music .list-album .icon {display:block;position:absolute;top:0;left:0;width:57px;height:57px;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/recent_icon_5.0.png') no-repeat 0 0;text-indent:-9999px;z-index:10}
+.recent-music .list-album .icon-preview {background-position:-62px 0}
+.recent-music .list-album .icon-magazine {background-position:-124px 0}
+.recent-music .list-album .icon-event {background-position:-186px 0}
+.recent-music .list-album .cover {overflow:hidden;position:absolute;top:0;left:0;width:100%;height:100%;-webkit-transition:width 0.25s,height 0.25s;transition:width 0.25s,height 0.25s}
+.recent-music .list-album .event:hover .cover {width:308px;height:308px;z-index:20}
+.recent-music .list-album .list-6.event:hover .cover {top:0;left:auto;right:0}
+.recent-music .list-album .list-7.event:hover .cover, .recent-music .list-album .list-8.event:hover .cover, .recent-music .list-album .list-9.event:hover .cover, .recent-music .list-album .list-10.event:hover .cover, .recent-music .list-album .list-11.event:hover .cover {top:auto;bottom:0}
+.recent-music .list-album .list-12.event:hover .cover {top:auto;bottom:0;left:auto;right:0}
+.recent-music .list-album .cover:before {content:'';display:block;position:absolute;bottom:0;left:0;width:100%;height:75px;background:url('//image.genie.co.kr/imageg/web/main/mask_recent.png') no-repeat 0 0}
+.recent-music .list-album .event:hover .cover:before {display:none}
+.recent-music .list-album .cover .mask {display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid #000;background:transparent none;opacity:0.1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=10)';filter:alpha(opacity=10);box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.recent-music .list-album .cover img {width:100%}
+.recent-music .list-album .info-album {visibility:hidden;position:absolute;top:0;left:0;width:151px;height:151px;text-align:center;z-index:10;opacity:0;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';filter:alpha(opacity=0);-webkit-transition:opacity 0.4s;transition:opacity 0.4s}
+.lt-ie9 .recent-music .list-album .info-album {display:none;visibility:visible}
+.recent-music .list-album .event .info-album {top:auto;bottom:-157px;width:308px;border:0;background:url('//image.genie.co.kr/imageg/web/main/mask_recent_event.png') transparent 0 0;text-align:left;z-index:20;-webkit-transition:opacity 0.5s;transition:opacity 0.5s}
+.recent-music .list-album .list-6.event .info-album {left:auto;right:0}
+.recent-music .list-album .list-7.event .info-album, .recent-music .list-album .list-8.event .info-album, .recent-music .list-album .list-9.event .info-album, .recent-music .list-album .list-10.event .info-album, .recent-music .list-album .list-11.event .info-album {bottom:0}
+.recent-music .list-album .list-12.event .info-album {bottom:0;left:auto;right:0}
+.recent-music .list-album :hover .info-album {visibility:visible;opacity:1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';filter:alpha(opacity=100)}
+.lt-ie9 .recent-music .list-album :hover .info-album {display:block}
+.recent-music .list-album .cover-artist {display:none;overflow:hidden;position:absolute;top:-10px;left:15px;width:40px;height:40px;border-radius:50%}
+.recent-music .list-album .cover-artist:before {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid #000;opacity:0.1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=10)';filter:alpha(opacity=10);box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.recent-music .list-album :hover .cover-artist {display:block}
+.recent-music .list-album .cover-artist img {width:100%}
+.recent-music .list-album .mask {display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:#000;opacity:0.8/*;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';filter:alpha(opacity=80)*/}
+.recent-music .list-album .artist {display:inline-block;position:absolute;bottom:5px;height:35px; overflow:hidden; left:0;width:100%;padding:0 8px 9px;color:#fff;text-align:center;z-index:10;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;opacity:1}
+.recent-music .list-album .artist .tit{display:table-cell; vertical-align:middle; height:35px; width:135px;}
+.recent-music .list-album :hover .artist {bottom:103px;font-weight:bold;color:#f9f9f9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;z-index:10}
+.recent-music .list-album .event:hover .artist {bottom:95px;padding:14px 14px 0;color:#f9f9f9;text-align:left}
+.recent-music .list-album .album-title {position:absolute;display:block;display:-webkit-box;top:44px;left:0;width:100%;height:51px;padding:0 8px;color:#d2d2d2;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;white-space:normal;word-wrap:break-word;-webkit-line-clamp:3;-webkit-box-orient:vertical;z-index:10}
+.recent-music .list-album .event .album-title {display:block;top:58px;height:auto;padding:0 14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;word-wrap:normal}
+.recent-music .list-album .info-event {position:absolute;top:81px;left:0;max-width:100%;padding:0 14px;font-weight:bold;color:#ff5b62;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.recent-music .list-album .btns {position:absolute;bottom:13px;left:0;width:100%}
+.recent-music .list-album .event .btns {left:12px}
+.recent-music .list-album .btn-basic {display:inline-block;overflow:hidden;position:relative;width:25px;height:25px;margin:0 3px;border:0;line-height:0;text-indent:-9999px;background:url('//image.genie.co.kr/imageg/web/blt/list_180122.png') transparent no-repeat 0 0;vertical-align:middle}
+.recent-music .list-album .btn-listen {background-position:0 -21px}
+.recent-music .list-album .btn-add {background-position:-30px -21px}
+.recent-music .bxslider {display:block;overflow:hidden;height:314px}
+.recent-music .bx-wrapper .bx-controls {position:absolute;right:0;top:-32px}
+.recent-music .bx-wrapper .bx-pager {display:block;bottom:auto;top:1px;right:75px;width:100px;color:#8b8b8b;text-align:right}
+.is-ie .recent-music .bx-wrapper .bx-pager {top:2px}
+.recent-music .bx-wrapper .bx-pager span {color:#444;font-weight:bold}
+.recent-music .bx-wrapper .bx-controls-direction a {display:inline-block;position:relative;top:auto;left:auto;right:auto;width:28px;height:28px;margin:-5px 2px 0 5px;border:0;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/recent_paging.png') no-repeat 0 0;text-indent:-9999px;vertical-align:top}
+.recent-music .bx-wrapper .bx-controls-direction .bx-next {background-position:-33px 0}
+.recent-music .bx-wrapper .bx-controls-auto {display:inline-block;position:relative;bottom:auto;right:auto;width:auto}
+.recent-music .bx-wrapper .bx-controls-auto .bx-start {display:none;width:28px;height:28px;margin:-5px 0 0 2px;border:0;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/recent_paging.png') transparent no-repeat -33px -33px;text-indent:-9999px;vertical-align:top}
+.recent-music .bx-wrapper .bx-controls-auto .bx-start.active {display:inline-block}
+.recent-music .bx-wrapper .bx-controls-auto .bx-stop {display:none;width:28px;height:28px;margin:-5px 0 0 2px;border:0;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/recent_paging.png') transparent no-repeat 0 -33px;text-indent:-9999px;vertical-align:top}
+.recent-music .bx-wrapper .bx-controls-auto .bx-stop.active {display:inline-block}
+.recent-music .swiper-play {display:block;position:absolute;top:-32px;right:0;width:28px;height:28px;margin:-5px 0 0 2px;border:0;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/recent_paging.png') transparent no-repeat 0 -33px;text-indent:-9999px;vertical-align:top}
+.recent-music .swiper-play.pause {background-position:-33px -33px}
+
+.banner {position:relative;overflow:hidden;width:100%;height:104px;margin:23px 0 0;background-color:#e8eef3}
+.banner a {display:block}
+.banner img {width:100%}
+.banner .banner-rolling {position:absolute;top:0;left:50%;width:610px;height:104px;margin-left:-470px}
+.banner .bx-controls {position:absolute;left:234px;bottom:13px;z-index:60}
+.is-ie .banner .bx-controls {bottom:12px}
+.banner .bx-wrapper .bx-pager {display:inline-block;position:relative;bottom:auto;width:auto}
+.lt-ie9 .banner .bx-wrapper .bx-pager {display:inline}
+.banner .bx-wrapper .bx-pager.bx-default-pager a {display:inline-block;width:12px;height:12px;margin:0;background:url('//image.genie.co.kr/imageg/web/main/banner_paging.png') no-repeat 3px 3px;opacity:1;vertical-align:top}
+.banner .bx-wrapper .bx-pager.bx-default-pager a.active {background:url('//image.genie.co.kr/imageg/web/main/banner_paging.png') no-repeat -18px 3px}
+.banner .swiper-play {display:inline-block;width:16px;height:16px;margin:5px 0 0 3px;border:0;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/banner_paging.png') transparent no-repeat 0 -11px;text-indent:-9999px;vertical-align:top;z-index:10}
+.is-ie .banner .swiper-play {margin-top:4px}
+.banner .swiper-play.pause {background-position:-21px -11px}
+.banner .banner-mini {position:absolute;top:0;left:50%;margin-left:162px}
+.banner-service {position:relative;width:940px;margin:0 auto}
+.banner-service a {display:block}
+.banner-service img {width:100%}
+.banner-service .btn-close {display:block;position:absolute;top:50%;right:9px;width:30px;height:30px;margin-top:-15px;border:0;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/banner_close.png') transparent no-repeat 0 0;text-indent:-9999px;z-index:10}
+
+.main-wrap {position:relative;width:940px;margin:10px auto 0}
+.chart {position:relative;width:608px;float:left}
+.main-wrap .chart .sub-title{margin:21px 0 9px}
+.chart .notice_blind{font-size:11px;font-family: "Dotum";color:rgb(153, 153, 153);display:inline-block;letter-spacing:-0.5px;display:inline-block;position: absolute;top:26px;left:106px}
+.chart .notice_blind:before{content:'※';display:inline;font-size:12px}
+.chart .date {display:inline-block;position:absolute;top:27px;right:0;color:#8b8b8b}
+.chart .music-list-wrap {position:relative}
+.chart .music-list-wrap .toolbar .btn-right {position:absolute;top:10px;right:12px}
+.chart .music-list-wrap .list-wrap {margin-bottom:0;border-top:1px solid #656565}
+.chart .music-list-wrap .list-wrap th {overflow:hidden;height:0;font-size:0;line-height:0;border-bottom:0;text-indent:-9999px}
+.chart .music-list-wrap .list-wrap .hd-number {width:35px}
+.chart .music-list-wrap .list-wrap .hd-rank {width:38px}
+.chart .music-list-wrap .list-wrap .hd-more {width:42px}
+.chart .music-list-wrap .list-wrap td {height:39px}
+.chart .music-list-wrap .list-wrap tr:hover td {background:transparent none}
+.chart .music-list-wrap .list-wrap tr.hover td {height:67px;background:transparent none}
+.chart .music-list-wrap .list-wrap tr:last-child td {border-color:#dedede}
+.chart .music-list-wrap .list-wrap .number {padding-left:11px;font:italic bold 15px arial, sans-serif;color:#444}
+.chart .music-list-wrap .list-wrap tr.hover .number {font-size:30px;padding-left:4px}
+.chart .music-list-wrap .list-wrap .td-rank {padding-right:9px;font-weight:bold;text-align:center}
+.chart .music-list-wrap .list-wrap .cover {display:none}
+.chart .music-list-wrap .list-wrap tr.hover .cover {display:inline-block;float:left;margin:0 13px 0 3px}
+.chart .music-list-wrap .list-wrap .info {padding-right:10px}
+.chart .music-list-wrap .list-wrap .info .title {float:left;width:60%;font-weight:normal}
+.chart .music-list-wrap .list-wrap tr.hover .info .title {width:100% !important;max-width:84%;padding-top:3px;font-weight:bold}
+.chart .music-list-wrap .list-wrap .info .artist {display:block;float:right;width:28.7% !important}
+.chart .music-list-wrap .list-wrap tr.hover .info .artist {float:left;width:100% !important;max-width:84%}
+.chart .music-list-wrap .list-wrap .more {padding-right:9px}
+.chart .music-list-wrap .list-wrap .more .toggle-button-box .list {overflow:visible;top:67px;width:606px;max-width:606px;height:199px;border-color:#a6afb6;border-radius:0;background-color:#eef1f4}
+.is-ie .chart .music-list-wrap .list-wrap .more .toggle-button-box .list {top:46px}
+.chart .music-list-wrap .list-wrap .more .toggle-button-box.reverse .list {top:auto;bottom:67px}
+.is-ie .chart .music-list-wrap .list-wrap .more .toggle-button-box.reverse .list {bottom:46px}
+.chart .music-list-wrap .list-wrap .more .toggle-button-box .list:before {content:'';display:block;position:absolute;top:-12px;right:14px;width:22px;height:12px;background:url('//image.genie.co.kr/imageg/web/main/chart_edge.png') no-repeat 0 0;z-index:10}
+.chart .music-list-wrap .list-wrap .more .toggle-button-box.reverse .list:before {top:auto;bottom:-12px;background-position:0 -17px}
+.chart .music-list-wrap .list-wrap .more-btns {position:absolute;top:6px;right:10px}
+.chart .music-list-wrap .list-wrap .more-btns .btn-basic {margin:0 2px}
+.chart .music-list-wrap .list-wrap .more-btns .btn-basic:hover, .chart .music-list-wrap .list-wrap .more-btns .btn-basic:focus {border-radius:0}
+.chart .music-list-wrap .toggle-button-box .list-mv {display:none;overflow:hidden;position:absolute;top:29px;right:0;min-width:70px;max-width:254px;padding:0;border:1px solid #a6afb6;border-radius:4px;font-size:11px;line-height:1.2;white-space:nowrap;background-color:#fff;text-align:left;z-index:90}
+.chart .music-list-wrap .toggle-button-box .list-mv.active {display:block}
+.chart .music-list-wrap .list-wrap .btn-close {position:absolute;bottom:0;right:0;width:64px;height:30px;padding:1px 0 0 28px;border:0;border-top:1px solid #a6afb6;border-left:1px solid #a6afb6;border-radius:3px 0 0 0;font-size:11px;background-color:#f7f8f9;color:#27282d;text-align:left}
+.chart .music-list-wrap .list-wrap .btn-close:before {content:'';display:block;position:absolute;top:11px;left:15px;width:9px;height:9px;background:url('//image.genie.co.kr/imageg/web/main/chart_close.png') no-repeat 0 0}
+.lt-ie9 .chart .music-list-wrap .list-wrap .btn-close:before {top:3px}
+.chart .music-list-wrap .balloon {display:inline-block;position:absolute;top:-15px;right:0;height:21px;padding:0 7px;border-radius:10px;line-height:22px;background-color:#0096FF;color:#fff;opacity:0;z-index:1;-webkit-transition:opacity 0.4s 5s;transition:opacity 0.4s 5s}
+.chart .music-list-wrap .balloon.active {opacity:1}
+.chart .music-list-wrap .balloon:before {content:'';display:block;position:absolute;bottom:-8px;right:23px;width:6px;height:8px;background:url('//image.genie.co.kr/imageg/web/main/chart_balloon_edge_5.0.png') no-repeat 0 0}
+
+.chart .duration {padding:12px 0 0 74px;font-size:12px;line-height:18px;color:#8b8b8b}
+.is-ie .chart .duration {padding-top:11px;line-height:20px}
+.chart .duration .ranking {display:inline-block;margin-right:14px;color:#a24416}
+.chart .duration.ranking-1 .ranking {color:#d62952}
+.chart .duration.ranking-2 .ranking {color:#0eb6e6}
+.chart .duration.ranking-3 .ranking {color:#47a879}
+.chart .duration.ranking-4 .ranking {color:#bfa77a}
+.chart .duration.ranking-5 .ranking {color:#977aaf}
+.chart .duration .top10 {display:inline-block}
+.chart .duration .btn-radius {display:inline-block;overflow:hidden;height:14px;margin-right:5px;padding:0 5px;border:1px solid #8b8b8b;border-radius:2px;font-size:11px;line-height:15px}
+.is-ie .chart .duration .btn-radius {line-height:17px}
+.chart .duration .ranking .btn-radius {border-color:#a24416}
+.chart .duration.ranking-1 .ranking .btn-radius {border-color:#d62952}
+.chart .duration.ranking-2 .ranking .btn-radius {border-color:#0eb6e6}
+.chart .duration.ranking-3 .ranking .btn-radius {border-color:#47a879}
+.chart .duration.ranking-4 .ranking .btn-radius {border-color:#bfa77a}
+.chart .duration.ranking-5 .ranking .btn-radius {border-color:#977aaf}
+.chart .svg-container {overflow:hidden;position:absolute;top:44px;left:70px;width:429px;height:126px;background:url('//image.genie.co.kr/imageg/web/main/bg_grid.png') no-repeat 50% 5px}
+.chart .time{position:absolute;bottom:13px;left:51px}
+.chart .time span {display:inline-block;width:38px;color:#8b8b8b;font-size:11px;letter-spacing:-1px;text-align:center}
+.chart .time span.hour {width:5px}
+.chart .ranking-link {display:block;position:absolute;top:68px;right:73px;width:30px}
+.chart .ranking-link span {display:block;overflow:hidden;width:30px;height:20px;margin-bottom:6px;border:0;font-size:11px;line-height:17px;background:url('//image.genie.co.kr/imageg/web/main/blt_tooltip.png') transparent no-repeat 0 -180px;color:#fff;text-align:center}
+.is-ie .chart .ranking-link span {line-height:19px}
+.chart .ranking-link .active {background-position:0 -150px}
+.chart .ranking-link.ranking-1 .active {background-position:0 0}
+.chart .ranking-link.ranking-2 .active {background-position:0 -30px}
+.chart .ranking-link.ranking-3 .active {background-position:0 -60px}
+.chart .ranking-link.ranking-4 .active {background-position:0 -90px}
+.chart .ranking-link.ranking-5 .active {background-position:0 -120px}
+
+.main-wrap .event {width:306px;float:right}
+.main-wrap .event .sub-title {margin-bottom:19px}
+.main-wrap .event .bxslider {overflow:hidden;width:306px;height:309px}
+.main-wrap .event .bxslider li {overflow:hidden;width:100%;height:100%;-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}
+.main-wrap .event .bxslider a {display:block}
+.main-wrap .event .bxslider img {width:100%}
+.main-wrap .event .bx-controls {position:absolute;left:13px;bottom:10px;width:293px;z-index:60}
+.is-ie .main-wrap .event .bx-controls {bottom:9px}
+.main-wrap .event .bx-wrapper .bx-pager {display:inline-block;position:relative;bottom:auto;width:auto}
+.main-wrap .event .bx-wrapper .bx-pager.bx-default-pager a {display:inline-block;width:12px;height:12px;margin:0;background:url('//image.genie.co.kr/imageg/web/main/event_paging.png') no-repeat 3px 3px;opacity:1;vertical-align:top}
+.main-wrap .event .bx-wrapper .bx-pager.bx-default-pager a.active {background:url('//image.genie.co.kr/imageg/web/main/event_paging.png') no-repeat -18px 3px}
+.main-wrap .event .swiper-play {display:inline-block;width:16px;height:16px;margin:5px 0 0 3px;border:0;line-height:0;background:url('//image.genie.co.kr/imageg/web/main/event_paging.png') transparent no-repeat 0 -11px;text-indent:-9999px;vertical-align:top;z-index:10}
+.is-ie .main-wrap .event .swiper-play {margin-top:4px}
+.main-wrap .event .swiper-play.pause {background-position:-21px -11px}
+.main-wrap .event .bx-wrapper .bx-controls-direction a {top:auto;bottom:124px;width:26px;height:44px;margin:0;background:url('//image.genie.co.kr/imageg/web/main/event_paging.png') no-repeat 0 -32px}
+.main-wrap .event .bx-wrapper .bx-controls-direction a.bx-prev {left:-13px}
+.main-wrap .event .bx-wrapper .bx-controls-direction a.bx-next {left:auto;right:0;background-position:-31px -32px}
+.main-wrap .event .list-new-album {margin-top:1px}
+.main-wrap .event .list-new-album li {display:block;position:relative;height:69px;padding:10px 20px 0 78px;border-bottom:1px solid #dedede;line-height:19px}
+.is-ie .main-wrap .event .list-new-album li {height:68px;padding-top:11px}
+.main-wrap .event .list-new-album a {display:block}
+.main-wrap .event .list-new-album .cover {display:block;position:absolute;top:5px;left:0;width:68px;height:68px}
+.main-wrap .event .list-new-album .cover .mask {display:block;position:absolute;top:0;left:0;width:66px;height:66px;border:1px solid #000;opacity:0.1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=10)';filter:alpha(opacity=10)}
+.main-wrap .event .list-new-album .cover img {width:100%;height:100%;vertical-align:top}
+.main-wrap .event .list-new-album .category {display:block;padding-bottom:3px;font-size:11px;font-weight:bold}
+.main-wrap .event .list-new-album .album-title {font-weight:bold;color:#27282d}
+.main-wrap .event .list-new-album .artist {color:#8b8b8b}
+
+.editor {position:relative;clear:both;width:953px;margin:14px auto 0;padding-left:1px}
+.editor .sub-title {padding-left:6px}
+.editor .next {display:none}
+.editor .next.active {display:block}
+.editor li {display:block;float:left;position:relative;width:224px;height:276px;margin:0 7px 13px 6px}
+.editor li.large {width:462px}
+.editor li > a {display:block;position:relative;width:100%}
+.editor li.large a {z-index:1}
+.editor .mask {display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid #000;background:transparent none;opacity:0.1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=10)';filter:alpha(opacity=10);box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.ie8 .full .editor .mask{height:276px}
+.editor .cover-recommend {overflow:hidden;position:relative;width:100%;height:147px;background-color:#9eb9cd}
+.editor .recommend.type-2 .cover-recommend {background-color:#e0afb1}
+.editor .recommend.type-3 .cover-recommend {background-color:#a7a6b6}
+.editor .recommend.type-4 .cover-recommend {background-color:#b1b5b6}
+.editor .recommend.type-5 .cover-recommend {background-color:#c4a9b6}
+.editor .recommend.type-6 .cover-recommend {background-color:#a7beba}
+.editor .cover {overflow:hidden;position:relative;width:100%;height:147px}
+.editor .recommend .cover {overflow:hidden;position:absolute;top:30px;width:88px;height:88px}
+.editor .recommend .cover:before {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid #000;background:transparent none;opacity:0.1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=10)';filter:alpha(opacity=10);box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.lt-ie9 .editor .recommend .cover:before {display:none}
+.editor .recommend .cover-main {top:20px;left:58px;width:108px;height:108px;z-index:10}
+.editor .cover-left {left:-30px}
+.editor .cover-right {right:-30px}
+.editor .full .cover {width:100%;height:100%}
+.ie8 .editor .full .cover {height:276px}
+.editor .mv .cover:before {content:'';display:block;position:absolute;top:50%;left:50%;width:48px;height:36px;margin:-18px 0 0 -24px;background:url('//image.genie.co.kr/imageg/web/main/editor_btn_play.png') no-repeat 0 0}
+.lt-ie9 .editor .mv .cover:before {z-index:10}
+.editor .cover img {width:100%}
+.lt-ie9 .editor .cover img {display:block;position:absolute;top:0;left:0;z-index:-1}
+.editor .cover-etc {display:block;position:absolute;bottom:18px;right:19px;width:92px;height:92px}
+.editor .cover-etc img {width:100%}
+.editor .recommend .total {display:none;position:absolute;top:0;left:0;width:100%;height:147px;background:url('//image.genie.co.kr/imageg/web/main/editor_over_bg.png') repeat 0 0;z-index:11}
+.editor .recommend :hover .total, .editor .recommend :focus .total {display:block}
+.editor .recommend .count {display:inline-block;position:absolute;top:41px;left:0;width:100%;padding-bottom:34px;font:20px 'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif,'Segoe UI Symbol';color:#fff;text-align:center;z-index:12}
+.editor .recommend .count:before {content:'';display:block;position:absolute;bottom:0;left:50%;width:31px;height:31px;margin-left:-16px;background:url('//image.genie.co.kr/imageg/web/main/editor_btn_play.png') no-repeat 0 -41px}
+.editor .recommend .count strong {display:inline-block;font-size:12px;vertical-align:middle}
+.editor .icons {position:absolute;top:131px;left:0;line-height:15px}
+.is-ie .editor .icons {top:130px}
+.editor .icon {display:inline-block;padding:1px 3px 0;font-size:11px;background-color:#0096FF;color:#fff}
+.editor .icon.icon-red {background-color:#ff5b62}
+.is-ie .editor .icon {padding:2px 3px 0}
+.editor .info {height:111px;padding:18px 13px 0}
+.editor .full .info {display:block;position:absolute;bottom:0;left:0;right:0}
+.ie8 .editor .full .info {top:147px}
+.editor .large .info {padding-right:130px}
+.editor .info a {display:block}
+.editor li.large .info a {min-height:92px}
+.editor .category {display:block;font-size:11px;color:#969697}
+.editor .full .category, .editor .full .desc {color:#fff;opacity:0.5;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';filter:alpha(opacity=50)}
+.editor .title {display:block;padding-top:6px;font-weight:bold; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  word-wrap:break-word; line-height: 1.2em; height: 2.4em}
+.editor .full .title {color:#fff}
+.editor .desc {display:block;position:absolute;bottom:18px;left:0;padding:0 13px;font-size:11px;color:#969697;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.editor a.dj {display:inline-block;position:absolute;bottom:13px;left:0;padding:0 13px;font-size:11px;color:#969697;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+.editor .dj .profile {display:inline-block;overflow:hidden;position:relative;width:24px;height:24px;margin:-5px 4px 0 0;border-radius:50%;vertical-align:top}
+.is-ie .editor .dj .profile {margin-top:-6px}
+.editor .dj .profile:before {content:'';display:block;position:absolute;top:0;left:0;width:23px;height:23px;border:1px solid #e5e5e5;opacity:0.1;filter:alpha(opacity=10)}
+.editor .dj .profile img {width:100%}
+.editor .dj .dj-name {display:inline-block;width:auto;max-width:80px}
+.editor .toggle-button-box {display:inline-block;position:absolute;bottom:16px;right:15px;border:0;font-size:11px;color:#969697}
+.editor .toggle-button-box .btn {display:inline-block;position:relative;padding-right:14px;border:0;font-size:11px;background:transparent none;color:#969697}
+.editor .toggle-button-box .close {display:inline-block;position:absolute;bottom:18px;right:14px;padding-right:14px;border:0;font-size:11px;background:transparent none;color:#969697}
+.is-ie .editor .toggle-button-box .close {bottom:16px}
+.editor .toggle-button-box .btn:before, .editor .toggle-button-box .close:before {content:'';display:block;position:absolute;top:8px;right:0;width:9px;height:6px;background:url('//image.genie.co.kr/imageg/web/main/editor_fold_small.png') no-repeat 0 0}
+.is-ie .editor .toggle-button-box .btn:before, .is-ie .editor .toggle-button-box .close:before {top:7px}
+.editor .toggle-button-box .close:before {top:4px;background-position:0 -11px}
+.is-ie .editor .toggle-button-box .close:before {top:5px}
+.editor .toggle-button-box .list {top:auto;bottom:-16px;left:-125px;width:198px;height:260px;padding:14px 13px 0 13px;border-radius:0;font-size:12px;line-height:1.5}
+.editor .toggle-button-box .list li {float:none;width:auto;height:auto;margin:0;padding:2px 0 3px}
+.editor .toggle-button-box .list li span {display:block}
+.editor .toggle-button-box .list li .track {color:#444}
+.editor .toggle-button-box .list .btn-detail {display:inline-block;position:absolute;bottom:12px;left:3px;width:auto;border:0;color:#444}
+.editor .toggle-button-box .list .btn-detail:hover, .editor .toggle-button-box .list .btn-detail:focus {background-color:transparent;color:#444}
+.editor .more {display:block;width:100%;text-align:center}
+.editor .more .btn-more {display:inline-block;overflow:hidden;position:relative;width:168px;height:40px;padding:0 22px 2px 0;border:1px solid #f7f8f9;border-radius:4px;font:14px 'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif,'Segoe UI Symbol';background:#f7f8f9;color:#27282d}
+.editor .more .btn-more:before {content:'';display:block;position:absolute;top:16px;right:30px;width:12px;height:6px;background:url('//image.genie.co.kr/imageg/web/main/editor_fold.png') no-repeat 0 0}
+.lt-ie9 .editor .more .btn-more:before {top:8px}
+.editor .more .btn-more.fold:before {background-position:0 -11px}
+
+.music-video {position:relative;width:952px;margin:14px auto 0}
+.music-video .sub-title {padding-left:6px}
+.music-video .list-mv li {display:block;float:left;position:relative;width:226px;margin:0 6px}
+.music-video .list-mv a {display:block;width:100%}
+.music-video .list-mv li > a:after{content:'';position:absolute;top:0;left:0;right:0;height:127px;border:1px solid #000;opacity:0.1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=10)';filter:alpha(opacity=10);box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;z-index:10}
+
+/*.music-video .list-mv .mask {display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid #000;background:transparent none;opacity:0.1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=10)';filter:alpha(opacity=10);box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}*/
+
+.music-video .cover {overflow:hidden;position:relative;width:100%;height:127px}
+.music-video .cover:before {content:'';display:none;position:absolute;top:0;left:0;right:0;bottom:0;background:#000;opacity:0.6;filter:"alpha(opacity=70)"; -ms-filter:"alpha(opacity=70)"}
+.music-video .cover:after {content:'';display:none;position:absolute;top:50%;left:50%;width:48px;height:36px;margin:-18px 0 0 -24px;background:url('//image.genie.co.kr/imageg/web/main/editor_btn_play.png') no-repeat 0 0}
+.music-video .list-mv a:hover .cover:before,.music-video .list-mv a:hover .cover:after{display:block}
+.lt-ie9 .music-video .cover:after {z-index:10}
+.music-video .cover img {width:100%;height:100%}
+
+.lt-ie9 .music-video .cover img {display:block;position:absolute;top:0;left:0;z-index:-1}
+.music-video .info {position:relative;height:127px;padding:15px 14px 0;border:solid 1px #e5e5e5;border-top:0;box-sizing: border-box}
+.music-video .info .title {display:block;padding-top:6px;font-size:13px;line-height:17px;font-weight:bold; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2;  -webkit-box-orient: vertical;  word-wrap:break-word;height:33px}
+.music-video .info .title .icon.icon-19,
+.music-video .info .title .icon.icon-all,
+.music-video .info .title .icon.icon-12,
+.music-video .info .title .icon.icon-15{display:inline-block;overflow:hidden;height:17px;margin:-1px 4px 0 0;padding:0;font-size:11px;font-weight:normal;background:url('//image.genie.co.kr/imageg/web/blt/list_190809.png') transparent no-repeat -38px -111px;vertical-align:top;color:#8b8b8b;line-height:1.3;text-indent:-9999px}
+.music-video .info .title .icon.icon-all{width:17px;background-position: -30px -129px}
+.music-video .info .title .icon.icon-12{width:17px;background-position: -50px -129px}
+.music-video .info .title .icon.icon-15{width:17px;background-position: -70px -129px}
+.music-video .info .title .icon.icon-19{width:17px;background-position: -90px -129px}
+.music-video .info .icon-type {display:inline-block;overflow:hidden;height:13px;margin:0 3px 0 0;padding:2px 2px 0;border:1px solid #8b8b8b;border-radius:2px;color:#8b8b8b;font-size:12px;font-weight:normal;line-height:13px;letter-spacing:-1px;vertical-align:top}
+.is-ie .music-video .info .icon-type {height:12px;margin:-1px 2px 0 0;padding-top:3px}
+
+.music-video .info .category {display:inline-block;overflow:hidden;height:13px;margin:0 4px 0 0;padding:1px 2px 0;border:1px solid #8b8b8b;border-radius:2px;color:#8b8b8b;font-size:11px;font-weight:normal;line-height:14px;letter-spacing:-1px;vertical-align:top}
+.is-ie .music-video .info .category{line-height:15px}
+.music-video .info .category.impt {border-color:#0eb6e6;color:#0eb6e6}
+.music-video .info .detail{display:inline-block;width:auto;position:absolute;top:16px;right:11px;padding-right:10px;border:0;font-size:11px;background:transparent none;color:#969697;letter-spacing:-1px;background:url('//image.genie.co.kr/imageg/web/blt/more_3.gif') no-repeat 100% 2px}
+
+.music-video .info .ic-holdback {vertical-align:top}
+.music-video .info .icon-type + .ic-holdback {margin-left:5px}
+.music-video .info .artist{display:block;font-size:12px;position:relative;line-height:22px;height:24px;position: absolute;bottom: 13px;left: 14px;right:14px;color:#969697;vertical-align: bottom;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;box-sizing: border-box;width: auto;}
+.music-video .info .artist > .mark{overflow:hidden;width:24px;height:24px;display:inline-block;border-radius:50%;vertical-align:middle;margin-right:2px;background:url('//image.genie.co.kr/imageg/web/common/face_none.gif') 0 0 no-repeat;position: relative;}
+.music-video .info .artist > .mark:after{content:'';position:absolute;top:0px;left:0;width:24px;height:24px;display:block;border-radius:50%;box-shadow:0px 0px 1px rgba(0,0,0,0.1) inset;}
+.music-video .info .artist > .mark > img{width:100%;height:100%;display:block;}
+
+
+.music-video .info .duration {display:inline-block;overflow:hidden;position:absolute;top:-18px;right:0;height:16px;padding:2px 6px 0 5px;font-size:11px;background-color:#000;background:rgba(0,0,0,0.7);color:#fff}
+.is-ie .music-video .info .duration {height:15px;padding-top:3px}
+
+.service {position:relative;width:940px;margin:28px auto 0}
+.service .introduce {padding-left:2px}
+.service .introduce dl {display:block;float:left;position:relative;width:217px;height:62px;padding:8px 0 0 95px}
+.service .introduce dl:before {content:'';display:block;position:absolute;top:8px;left:7px;width:52px;height:52px;background:url('//image.genie.co.kr/imageg/web/main/service.png') no-repeat 0 0}
+.is-ie .service .introduce dl:before {top:7px}
+.service .introduce dl:after {content:'';display:block;position:absolute;top:0;left:0;width:1px;height:70px;background-color:#e5e5e5}
+.service .introduce dl:first-child:after {display:none}
+.service .introduce .service-special {width:235px;padding-left:77px}
+.service .introduce .service-edm:before {left:23px;width:56px;background-position:-57px 0}
+.service .introduce .service-flac:before {left:21px;width:61px;background-position:-118px 0}
+.service .introduce dt {display:inline-block;padding:0 0 7px 0;font-weight:bold}
+.service .introduce dd {display:block;font-size:11px;line-height:16px;color:#969697}
+.service .introduce a {display:inline-block;position:relative;padding-right:11px}
+.service .introduce dt a:before {content:'>';position:absolute;top:0;right:0;font-weight:normal}
+
+#wrap-main .wrap_layerpopup {position:absolute;left:50%;width:520px;height:353px;margin-left:-260px;border:1px solid #5e5e5e;padding:10px;background-color:#fff;z-index:70}
+#wrap-main .wrap_layerpopup ul {overflow:hidden}
+#wrap-main .wrap_layerpopup ul li{float:left;margin-left:10px}
+#wrap-main .wrap_layerpopup ul li:first-child{margin-left:0;}
+#wrap-main .wrap_layerpopup .pop_control{margin-top:8px;}
+#wrap-main .wrap_layerpopup .pop_control span{float:left;margin-left:5px;}
+#wrap-main .wrap_layerpopup .pop_control span input{vertical-align:middle}
+#wrap-main .wrap_layerpopup .pop_control span label {margin-left:5px;vertical-align:baseline;font-size:11px;color:#666}
+#wrap-main .wrap_layerpopup .pop_control .btn_close{float:right;margin-right:6px;background:url('//image.genie.co.kr/imageg/web/popup/btn_close_r1.gif') no-repeat 100% 3px;padding-right:13px;font-size:11px;color:#666}
+
+#wrap-main .wrap_layerpopup1{position:absolute;left:50%;width:350px;height:350px;margin-left:-175px;border:1px solid #5e5e5e;padding:10px;background-color:#fff;z-index:70}
+#wrap-main .wrap_layerpopup1 ul {overflow:hidden}
+#wrap-main .wrap_layerpopup1 ul li{float:left;margin-left:10px}
+#wrap-main .wrap_layerpopup1 ul li:first-child{margin-left:0;}
+#wrap-main .wrap_layerpopup1 .pop_control{margin-top:8px;}
+#wrap-main .wrap_layerpopup1 .pop_control span{float:left;margin-left:5px}
+#wrap-main .wrap_layerpopup1 .pop_control span input{vertical-align:middle}
+#wrap-main .wrap_layerpopup1 .pop_control span label {margin-left:5px;vertical-align:middle;font-size:11px;color:#666}
+#wrap-main .wrap_layerpopup1 .pop_control .btn_close{float:right;margin-right:6px;background:url('//image.genie.co.kr/imageg/web/popup/btn_close_r1.gif') no-repeat 100% 50%;padding-right:13px;font-size:11px;color:#666}
+
+#wrap-main .mpopup {z-index:1001;position:absolute;top:0%;left:0%;width:100%;height:100%}
+#wrap-main .mpopup .back {position:fixed;left:0;top:0;width:100%;height:100%;background:#000;-ms-filter: alpha(opacity=50); filter: alpha(opacity=50); opacity:0.3; -moz-opacity:0.3;}
+#wrap-main .mpopup .mpopup_wrap {position:absolute;left:50%;width:350px;margin-left:-175px;background-color:#fff;border:1px solid #5e5e5e;padding:10px;}
+#wrap-main .mpopup .mpopup_wrap:after{content:"clearFix";display:block;height:0;font-size:0;line-height:0;clear:both}
+#wrap-main .mpopup .compatibility {background-color:#f6f6f6}
+#wrap-main .mpopup .compatibility .mpopup_content {display:block;width:350px;height:280px;line-height:0;background:url('//image.genie.co.kr/imageg/web/popup/popup_compatibility.png') no-repeat 0 0;text-indent:-9999px}
+#wrap-main .mpopup .compatibility .mpopup_content a {display:block;position:absolute;top:0;left:0;width:100%;height:100%;font-size:0;line-height:0;text-indent:-9999px}
+#wrap-main .mpopup .pop_control {position:relative;height:13px;padding:11px 0 0 0;line-height:1;}
+#wrap-main .mpopup .pop_control:after{content:"clearFix";display:block;height:0;font-size:0;line-height:0;clear:both}
+#wrap-main .mpopup .pop_control span {float:left;margin-left:5px;}
+#wrap-main .mpopup .pop_control span input {position:relative;top:-1px;vertical-align:middle;}
+#wrap-main .mpopup .pop_control span label {color:#666666;font-size:11px;margin-left:4px;vertical-align:middle;cursor:pointer;}
+#wrap-main .mpopup .pop_control .btn_close {position:absolute;bottom:0px;right:0px;background: url("//image.genie.co.kr/imageg/web/popup/btn_close_r1.gif") no-repeat scroll 100% 0;color: #666666;font-size:11px;margin-right:5px;padding-right:10px;width:23px;}

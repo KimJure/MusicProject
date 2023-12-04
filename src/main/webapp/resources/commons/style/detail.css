@@ -1,0 +1,594 @@
+@charset 'utf-8';
+
+.artist-main-infos {margin:0 0 29px 0; padding:20px 0 0;}/* 2015-07-01 상용 동기화 */
+.artist-main-infos  + hr.hr {margin-top:15px;}
+	.artist-main-infos:after {content:''; clear:both; display:block; height:0;}
+	.artist-main-infos {display:inline-block;}
+.artist-main-infos .photo-zone {float:left; width:200px; margin-right:27px;}
+.artist-main-infos .photo-zone .thum {text-align:center;}
+.artist-main-infos .cover-img {display:block; width:200px; border:1px solid #d9d9d9; margin-bottom:6px;}
+.artist-main-infos .cover-img img {display:block; width:200px;}
+.artist-main-infos .info-zone {float:left; width:364px;}
+.artist-main-infos h2.name {display:inline; font-size:24px; line-height:32px; margin:0 6px 0 0; font-family:'Malgun Gothic', '맑은 고딕', 'Nanum Gothic', '나눔 고딕', dotum, sans-serif; color:#333; letter-spacing:-1px;}
+.artist-main-infos .info-data {margin:20px 0 0 0;clear:both;}
+.artist-main-infos .info-data li {line-height:16px; margin:0 0 6px;}
+.artist-main-infos .info-data .attr {min-width:56px; display:inline-block; vertical-align:top;}
+.artist-main-infos .info-data .value {display:inline-block; max-width:260px; margin-top:2px; vertical-align:top;}
+.artist-main-infos .info-data + .sns-like {margin:16px 0 0;}
+.artist-main-infos .aside-zone {float:right;}
+.page-top-this {width:750px; padding:11px 0 9px; font-size:16px; color:#000; line-height:28px;}
+
+
+.detail-descript {margin:25px 0 0; padding:0 0 3px 0;}
+.detail-descript .tit-box {margin:0 0 5px;}
+.detail-descript .desc-cont {position:relative;height:100px;margin-left:-1px;padding:2px 0 20px 0;overflow:hidden}
+	.detail-descript .desc-cont:after {content:''; display:block; position:absolute; bottom:0; height:20px; width:100%; background:url('//image.genie.co.kr/imageg/web/common/fade_hide.png') repeat-x 0 0;}
+.detail-descript .desc-cont p {line-height:22px;}
+.detail-descript .desc-expand {margin:10px 0 0; text-align:right;min-height:19px}
+.detail-descript .fade-hide {display:block; position:absolute; bottom:0; height:20px; width:100%; background:url('//image.genie.co.kr/imageg/web/common/fade_hide.png') repeat-x 0 0;}
+
+.artist-top-title {position:relative; margin:20px 0; min-height:52px;}
+.artist-top-title .name-photo {padding:4px 0 0;}
+.artist-top-title h2.name {display:inline-block; max-width:500px; font-size:24px; line-height:36px; margin:0 10px 0 68px; font-family:'Malgun Gothic', '맑은 고딕', 'Nanum Gothic', '나눔 고딕', dotum, sans-serif; color:#333; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; vertical-align:middle;}
+	.artist-top-title h2.name {display:inline; zoom:1;}
+.artist-top-title .photo {position:absolute; top:0; left:0; border:1px solid #d9d9d9; width:50px; height:50px;}
+.artist-top-title .photo img {display:block; width:50px;}
+.artist-top-title .sns-like {position:absolute; top:15px; right:0;}
+
+.song-main-infos {clear:both;}
+.song-main-infos  + hr.hr {}
+	.song-main-infos:after {content:''; clear:both; display:block; height:0;}
+	.song-main-infos {display:inline-block;}
+.song-main-infos {position:relative;padding-bottom:7px;z-index:20;}
+.song-main-infos .title-line {}
+.song-main-infos h1.name {padding:27px 0 20px; border-bottom:1px solid #656565; font-size:24px; line-height:1em; font-family:'Malgun Gothic', '맑은 고딕', 'Nanum Gothic', '나눔 고딕', dotum, sans-serif; color:#333;}
+.song-main-infos .photo-zone {float:left; width:210px; margin-right:22px; padding-top:20px; }
+.song-main-infos .photo-zone .thum {text-align:center;}
+.song-main-infos .info-zone {float:left; width:450px; padding-top:20px;}
+.song-main-infos h2.name {font-size:24px; line-height:32px; margin:0 6px 23px 0; font-family:'Malgun Gothic', '맑은 고딕', 'Nanum Gothic', '나눔 고딕', dotum, sans-serif; color:#333; letter-spacing:-1px;}
+.song-main-infos h2.name .ic-limit {width:24px;height:24px;margin-right:5px;background:url('//image.genie.co.kr/imageg/web/blt/res_icon.png') no-repeat;}
+.song-main-infos .info-zone .song-button-zone {margin-bottom:10px; padding-top:13px;}
+
+.song-main-infos .info-data {padding:0 0 0 3px;clear:both;}
+.song-main-infos .info-data li {line-height:16px; margin:0 0 8px;}
+.song-main-infos .info-data .attr {min-width:72px; display:inline-block; vertical-align:top;}
+.song-main-infos .info-data .value {display:inline-block; max-width:350px; vertical-align:top;}
+.song-main-infos .info-data .value a:hover {text-decoration:underline;}
+.song-main-infos .info-data + .sns-like {margin:20px 0 0;}
+.song-main-infos .aside-zone {float:right; margin-top:20px; margin-right:1px;}
+.song-main-infos .info-data .fc-gray {color:#999;}
+
+.song-main-infos .info-data li .roll-page {color:#999; font-weight:bold; vertical-align:top; display:inline-block; padding:0 4px 0 15px;}
+.song-main-infos .info-data li .roll-page i {font-weight:normal;}
+.song-main-infos .info-data li .roll-page em {color:#4bbdc7; font-style:normal; vertical-align:baseline;}
+.song-main-infos .info-data li .roll-nav {vertical-align:top; display:inline-block; margin-top:-1px;}
+
+.album-detail-infos {margin:20px 0 27px;}
+	.album-detail-infos:after {content:''; clear:both; display:block; height:0;}
+	.album-detail-infos {display:inline-block;}
+.album-detail-infos .photo-zone {float:left; width:210px; margin-right:22px;}
+.album-detail-infos .photo-zone .thum {text-align:center; margin-top:6px;}
+.album-detail-infos .info-zone {float:left; width:450px;}
+.album-detail-infos h2.name {font-size:24px; line-height:32px; margin:0 6px 23px 0; font-family:'Malgun Gothic', '맑은 고딕', 'Nanum Gothic', '나눔 고딕', dotum, sans-serif; color:#333; letter-spacing:-1px;}
+.album-detail-infos .info-data {padding:0 0 0 3px;clear:both;}
+.album-detail-infos .info-data li {line-height:16px; margin:0 0 8px;}
+.album-detail-infos .info-data .attr {min-width:72px; display:inline-block; vertical-align:top;}
+.album-detail-infos .info-data .value {display:inline-block; max-width:260px; vertical-align:top;}
+.album-detail-infos .info-data + .sns-like {margin:20px 0 0;}
+.album-detail-infos .aside-zone {float:right; margin-top:0px;}
+.album-detail-infos .info-zone .song-button-zone {padding:15px 0 10px;}
+.song-button-zone {position:relative; z-index:1;}
+.song-button-zone .toggle-button-box {margin-right:4px;}
+.song-button-zone .sns-like {margin:0 0 0 4px;padding:0 0 0 9px;background:url('//image.genie.co.kr/imageg/web/detail/line_sns_like.gif') 0 50% no-repeat;}
+.song-button-zone .hide {display:none;}
+
+.hq_info {position:relative;height:13px;z-index:20;}
+.hq_info p.txt {position:relative;top:-20px;left:0px;color:#f78074;font-size:12px;line-height:19px;}
+.hq_info p.txt strong {float:left;}
+.hq_info p.txt span {float:left;}
+.hq_info .help {float:left;position:relative;top:2px;left:4px;display:inline-block;width:14px;height:14px;background:url('//image.genie.co.kr/imageg/web/blt/question.gif') 0 0 no-repeat;font-size:0;line-height:0;}
+.hq_info .hq_layer {display:none;position:absolute;top:4px;left:0px;width:453px;border:1px solid #dedede;background:#fff;z-index:20;}
+.hq_info .hq_layer .bg_top {display:block;position:absolute;top:-6px;right:7px;width:12px;height:6px;background:url('//image.genie.co.kr/imageg/web/common/layer_hq.gif') 0 0 no-repeat;}
+.hq_info .hq_layer .bg_top.etc {right:141px;}
+.hq_info .hq_layer a.close {position:absolute;top:12px;right:12px;display:block;width:7px;height:7px;background:url('//image.genie.co.kr/imageg/web/btn/del_x.gif') 0 0 no-repeat;font-size:0;line-height:0;}
+.hq_info .hq_layer .txt1 {padding:10px 0 0 14px}
+.hq_info .hq_layer .txt1 dt {margin-bottom:1px;color:#f78074;font-size:12px;line-height:19px;font-weight:bold;}
+.hq_info .hq_layer .txt1 dd {font-size:11px;line-height:15px;color:#444;}
+.hq_info .hq_layer .txt2 {padding:11px 0 0 14px}
+.hq_info .hq_layer .txt2 dt {color:#444;font-size:11px;line-height:15px;font-weight:bold;}
+.hq_info .hq_layer .txt2 dd {font-size:11px;line-height:15px;color:#999;}
+.hq_info .hq_layer .txt2 dd p {padding:5px 0 8px 0;}
+.hq_info .hq_layer .txt2 dd a {color:#999;text-decoration:underline;}
+
+.notUseTxt {position:relative;top:-18px;left:0px;padding:0 0 0 17px;background:url('//image.genie.co.kr/imageg/web/blt/exclamation.gif') 1px 2px no-repeat;color:#999;font-size:12px;line-height:19px;}
+
+
+
+
+	.lyrics:after {content:''; clear:both; display:block; height:0;}
+	.lyrics {display:inline-block;position:relative;z-index:10;}
+.lyrics .tit-box {position:relative;}
+.lyrics .tit-box h3 {display:inline-block; vertical-align:baseline;}
+	.lyrics .tit-box h3 {display:inline; zoom:1;}
+.lyrics .tit-box .btn-agn {position:absolute; right:0; top:0;}
+.lyrics .tit-box .btn-agn span {margin-left:7px;}
+.lyrics .tit-box .btn-agn span:first-child {margin-left:0;}
+.lyrics .lyrics-area {float:left; width:680px;}
+.lyrics .lyrics-area pre {margin:0 0 20px; background:url('//image.genie.co.kr/imageg/web/common/dot_line_1.gif') repeat-x 0 bottom;white-space: pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap: break-word;}
+.lyrics .lyrics-area pre div {font-size:14px; font-weight:bold; font-family:'Malgun Gothic', '맑은 고딕', 'Nanum Gothic', '나눔 고딕', dotum, sans-serif; color:#333;}
+.lyrics .lyrics-area pre p {font-size:12px; line-height:24px; }
+.restrictions p {color:#333333;font-size:12px;line-height:24px;}
+.restrictions .red {color:#ff5a63}
+.restrictions .help_link {color:#999999;background:url('//image.genie.co.kr/imageg/web/blt/more_1.gif') 100% 44% no-repeat;padding-right:14px;}
+
+.lyrics .rnt-cate {float:right; width:238px; border:1px solid #dedede;  background:#fdfdfd;}
+.lyrics .rnt-cate .like-sns {margin-bottom:20px; padding:20px 19px; border-bottom:1px solid #dedede;}
+.lyrics .rnt-cate .like-sns ul {margin-top:12px;}
+.lyrics .rnt-cate .like-sns li {margin-top:10px; overflow:hidden;}
+.lyrics .rnt-cate .like-sns li:first-child {margin-top:0;}
+.lyrics .rnt-cate .like-sns li div {float:left; width:41px; height:41px; margin-right:10px;}
+.lyrics .rnt-cate .like-sns li div img {width:40px; height:40px; border:1px solid #dedede;}
+.lyrics .rnt-cate .like-sns li p {float:left; width:130px; padding-top:12px;}
+.lyrics .rnt-cate .like-sns li p a {margin-left:5px;}
+.lyrics .rnt-cate .like-sns li p a:hover {text-decoration:underline;}
+.lyrics .rnt-cate .mv-wrap {clear:both; padding:0 19px; *padding:0 19px 16px;}
+.lyrics .rnt-cate .mv-type-1 {margin-top:15px; padding:0;}
+.lyrics .rnt-cate .mv-type-1 li {margin:0 0 16px 0;}
+
+.btn-grp {position:relative;}
+.btn-grp .agn-l {display:inline-block; vertical-align:baseline;}
+.btn-grp .agn-r {position:absolute; right:0; top:0;}
+
+/* LP event zone */
+.LPevtZone {position:relative; margin:0 0 26px 0; min-height:133px;}
+.LPevtZone .min, .LPevtZone .max {display:none;}
+.LPevtZone .min .img {display:block; width:940px; height:133px;}
+.LPevtZone .max .img {display:block; width:940px; height:482px;}
+.LPevtZone .min .in_btn {position:absolute; bottom:27px; left:137px;}
+.LPevtZone .max .in_btn {position:absolute; bottom:27px; left:137px;}
+.LPevtZone .min .evt_more {position:absolute; bottom:27px; left:31px;}
+.LPevtZone .max .evt_more {position:absolute; bottom:27px; left:31px;}
+.LPevtZone .evt_type {position:absolute; top:0; right:0;}
+.LPevtZone .toggle_btn {height:25px; text-align:right;}
+
+
+/* artist main  */
+.tab-1.artist-main:first-child {margin:16px 0 14px;}
+.tab-1.artist-main {margin:30px 0 0;}
+.tab-1.artist-main ul li a {min-width:72px;}
+
+/* music videio */
+.hit-mv-aside {padding:12px 14px 0; border-bottom:1px solid #dedede; background-color:#fff;}
+.h3_mv_hit {}
+.hit-mv-aside h3 {margin-bottom:10px;}
+.hit-mv-aside li {position:relative; margin:0 0 12px;}
+.hit-mv-aside li .thumb {display:block; border:1px solid #d9d9d9; width:178px; height:100px; margin-bottom:5px;}
+.hit-mv-aside li .thumb img {display:block; width:100%; height:100%;}
+.hit-mv-aside li .time {position:absolute; top:85px; right:3px; padding:0 5px; display:inline-block; font:bold 11px/14px Arial, Verdana, Sans-serif; color:#fff;}
+	.hit-mv-aside li .time {background:transparent url('//image.genie.co.kr/imageg/web/common/black_70a.png') repeat 0 0;}
+	:root *> .hit-mv-aside li .time {background:none; background-color:rgba(0,0,0,.7);}
+.hit-mv-aside li .title {max-width:100%; display:inline-block; line-height:1.5; vertical-align:middle; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.hit-mv-aside li .title:hover {text-decoration:underline;}
+.hit-mv-aside li .hits {display:block; font-size:11px; color:#999;}
+
+
+/* 장르 */
+.tab-1.genre li a {min-width: 55px;padding: 11px 6px 0 7px;}
+.tab-1.genre li:last-child {float:none;overflow: hidden}
+.tab-1.genre li:last-child a {border-right:0 none;display: block;}
+
+.major-ar {}
+
+.song-image-list {margin-bottom:19px;}
+.song-image-list > div:after {content:' '; display:block; visibility:hidden; clear:both;}
+.song-image-list ul {}
+.song-image-list ul li {float:left; height:48px; margin-right:4px;}
+.song-image-list ul li a {display:block; border:1px solid #d9d9d9;}
+.song-image-list ul li a img {height:46px;}
+
+
+
+/* 차트 */
+.chart-date {position:relative; margin-top:10px; padding-bottom:6px; z-index:10;}
+.chart-date .date {text-align:center;}
+.chart-date .date h3 {color:#4e4e4e; font-size:21px; font-weight:bold; font-family:Tahoma, sans-serif; vertical-align:middle; display:inline-block; margin-right:6px;}
+	.chart-date .date h3 {display:inline; margin-right:10px;}
+.chart-date .date h3 time {color:#f68074; font-weight:normal;}
+.chart-date .date img {vertical-align:middle;}
+.chart-date .select-term {position:absolute; left:0; top:5px; padding-left:1px;}
+.chart-date .select-term:after {content:' '; display:block; visibility:hidden; clear:both;}
+.chart-date .select-term {display:inline-block;}
+.chart-date .select-term li {float:left; width:47px; height:22px; margin-left:-1px;}
+.chart-date .select-term li.realtime {width:59px;}
+.chart-date .select-term li a {display:block; position:relative; z-index:1; height:20px; border-top:1px solid #ccc; border-bottom:1px solid #ccc; background-image:url('//image.genie.co.kr/imageg/web/detail/bu_select_term.gif') !important; background-position:0 50%; background-repeat:no-repeat; background-color:#fafafa; color:#656565; font-size:11px; line-height:22px; text-align:center;}
+.chart-date .select-term li a:hover {color:#444; font-weight:bold;}
+.chart-date .select-term li.first a{border-left:1px solid #ccc; border-radius:3px 0 0 3px; background-image:none !important;}
+.chart-date .select-term li.last a{border-right:1px solid #ccc; border-radius:0 3px 3px 0;}
+.chart-date .select-term li a.current {z-index:2; border:1px solid #9c9c9c; background-image:none !important; background-color:#a5a5a5; box-shadow:inset 1px 1px 0 rgba(0,0,0,.05); color:#fff; font-weight:bold;}
+.chart-date .notice {color:#999; font-size:11px; position:absolute; right:0; top:8px;}
+.chart-date .notice_blind {font-size: 11px;font-family: "Dotum";color: rgb(153, 153, 153);padding-top:14px;letter-spacing:-0.5px}
+.chart-date .notice_blind:before{content:'※';display:inline;font-size:12px}
+.chart-date .btns {position:absolute; right:0; top:5px;}
+.rank-page-nav a {display:inline-block;width:96px;height:25px;line-height:22px;border:1px solid #a6afb6;border-radius:4px;color:#27282d}
+.rank-page-nav a span {display:inline-block;margin-top:-2px;font:14px 'Tahoma';vertical-align:middle}
+
+
+
+/* 최신음악 */
+.newest-list {position:relative; z-index:5; margin:0 0 30px;}
+.newest-list .list-view-btns {margin-top:-8px;}
+
+/* edm */
+.aside .album-type-2 .album-item .view {right:10px; padding-right:15px;}
+.aside .album-type-2 .album-item .dumy .button .toggle-button-box .btn,
+.aside .album-type-2 .album-item .dumy .button .album-down {padding:0 8px;}
+.aside .album-type-2 .album-item .title-song {width:160px;}
+
+/* 곡, 앨범, 아티스트 */
+.artist-edm-released {margin-top:6px;padding:26px 0 40px 0;border-top:1px solid #dedede;}
+.artist-edm-released .artist-edm-list {width:100%;height:112px;margin:12px 0 0 0;font-size:12px;color:#444;overflow:hidden;}
+.artist-edm-released .artist-edm-list ul {display:inline-block;height:100%;}
+.artist-edm-released .artist-edm-list ul li {position:relative;float:left;width:450px;padding:0 20px 20px 0;}
+.artist-edm-released .artist-edm-list ul li:after {content:"clearFix";display:block;height:0;font-size:0;line-height:0;clear:both;}
+.artist-edm-released .artist-edm-list ul:after {content:"clearFix";display:block;height:0;font-size:0;line-height:0;clear:both;}
+.artist-edm-released .artist-edm-list .thumb {float:left;width:198px;height:110px;margin:0 15px 0 0;border:1px solid #dedfe1;}
+.artist-edm-released .artist-edm-list .date {color:#0096FF;font-weight:bold;}
+.artist-edm-released .artist-edm-list a p {font-weight:bold;margin:2px 0 4px 0;}
+.artist-edm-released .artist-edm-list a span {display:block;overflow:hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; /* 라인수 */ -webkit-box-orient: vertical;  word-wrap:break-word; line-height: 1.4em; height:4em;}
+.artist-edm-released .artist-edm-list a:hover {text-decoration:underline;}
+.artist-edm-released .artist-edm-list:after {content:"clearFix";display:block;height:0;font-size:0;line-height:0;clear:both;}
+
+
+.artist-musicvideo {padding-bottom:13px;}
+.artist-musicvideo .roll-nav {font-size:0; line-height:0; display:inline-block; vertical-align:middle; margin-left:5px; margin-top:-1px; }
+/*.artist-musicvideo .roll-nav, {display:inline;}*/
+
+.artist-album-released {padding:13px 0;}
+.artist-album-released .roll-nav {font-size:0; line-height:0; display:inline-block; vertical-align:middle; margin-left:5px; margin-top:-1px; }
+	.artist-album-released .roll-nav {display:inline;}
+.artist-album-released .article {margin-left:4px;}
+
+.artist-album-list {position:relative; margin:30px 0; z-index:5;}
+.artist-album-list .album-none {margin:10px 0 0 0;padding:102px 0 79px 0;border-top:2px solid #656565;border-bottom:1px solid #dedede;text-align:center;color:#666;line-height:29px;}
+.artist-album-list .album-none a {text-decoration:underline;color:#f68074;}
+
+.mv-type-1 {padding:12px 0 0; width:940px;}
+	.mv-type-1 {position:relative;}
+.mv-type-1 ul {margin-left:-46px;}
+	.mv-type-1 ul:after {content:''; clear:both; display:block; height:0;}
+	.mv-type-1 ul {display:inline-block;}
+.mv-type-1 li {float:left; width:200px; margin:0 0 0 46px;}
+.mv-type-1 .mv-thumb {position:relative; display:block; margin:0 0 11px; width:198px; height:110px; border:1px solid #dedede;}
+	.mv-type-1 .mv-thumb {cursor:pointer;}
+.mv-type-1 .mv-thumb .cover img {display:block; width:198px; height:110px;}
+.mv-type-1 .mv-thumb .deco {position:absolute; bottom:0; left:0; width:188px; padding:0 0 0 10px; height:24px; color:#fff; font:bold 10px/24px Tahoma, sans-serif; background-color:rgba(0,0,0,.4);}
+	.mv-type-1 .mv-thumb .deco-ie {position:absolute; bottom:0; left:0; width:198px; height:24px; background-color:#000; filter:alpha(opacity=40);}
+	:root *> .mv-type-1 .mv-thumb .deco-ie {display:none;}
+.mv-type-1 .mv-thumb .deco i {position:absolute; top:5px; right:10px; width:14px; height:14px; background:url('//image.genie.co.kr/imageg/web/blt/mv_small.png') no-repeat 0 0;}
+
+.mv-type-1 li .title-line {max-width:100%;position:relative;display:inline-block;line-height:16px}
+.mv-type-1 li .title-line > span {max-width:100%; position:relative; display:inline-block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;line-height:17px}
+.mv-type-1 li .title-line .subject {color:#444;font-weight:bold}
+.mv-type-1 li .title-line .ic-info {text-indent:-999px; font-size:12px; margin-right:5px; margin-top:-1px; overflow:hidden; }
+.mv-type-1 li .title-line .ic-info{text-indent:0;}
+.mv-type-1 li .title-line .ic-holdback {position:absolute; top:0; right:0;}
+.mv-type-1 li .title-line .ic-holdback  *{background:red}
+.mv-type-1 li .title-line .btn-info{display:inline-block;overflow:hidden;position:relative;border:0;line-height:0;text-indent:-9999px;background:url('//image.genie.co.kr/imageg/web/blt/list_180122.png') transparent no-repeat 0 0;vertical-align:middle;width:14px;height:14px;background-position:0 -111px;vertical-align:top}
+.mv-type-1 li .title-line .btn-info:hover{background-position:-19px -111px}
+
+.mv-type-1 li .artist{display:block;line-height:18px;height:18px;}
+.mv-type-1 li .artist a{display:inline-block; vertical-align:middle; font-size:11px; color:#999; max-width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.mv-type-1 li .title-line a:hover,
+.mv-type-1 li .artist a:hover {text-decoration:underline;}
+
+.subject.notUse {color:#dadada !important; cursor:default;}
+.subject.notUse:hover {text-decoration:none !important;}
+
+.musicvideo-list .tit-box {margin-bottom:10px;}
+.musicvideo-list .mv-type-1 {border-top:2px solid #656565; padding:20px 0 0;}
+.musicvideo-list .mv-type-1 li {min-height:175px; padding-bottom:20px;}
+.musicvideo-list .mv-type-1 ul {background:url('//image.genie.co.kr/imageg/web/common/hor_line_2.gif') repeat 0 0;}
+
+.musicvideo-list .mv-none {padding:102px 0 79px 0;border-top:2px solid #656565;border-bottom:1px solid #dedede;text-align:center;color:#666;line-height:29px;}
+.musicvideo-list .mv-none a {text-decoration:underline;color:#f68074;}
+/* album-type-1 */
+.album-type-1 {padding:12px 0 0 0;}
+	.album-type-1 {position:relative;};
+.album-type-1 .wrap {position:relative;}
+.album-type-1 .wrap:after {content:''; clear:both; display:block; height:0;}
+	.album-type-1 .wrap {display:inline-block;}
+.album-type-1 li {float:left; width:117px; margin:0 0 0 47px;}
+	.album-type-1 li:first-child {margin-left:0;}
+.album-type-1 .event {display:block; margin:0 0 2px;}
+.album-type-1 .date {font-size:11px; color:#999; display:block; line-height:15px;}
+.album-type-1 .artist {display:inline-block; line-height:1.5; margin:2px 0 0; max-width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; font-weight:bold;}
+.album-type-1 .artist:hover {text-decoration:underline;}
+.album-type-1 .total-song {display:block; line-height:15px; color:#999; margin-top:-2px; *margin-top:0; padding:0 0 0 14px; background:url('//image.genie.co.kr/imageg/web/blt/total_song.gif') no-repeat 0 1px;}
+/* album-type-2 */
+.album-type-2 {position:relative; margin:10px 0 0; border-top:2px solid #656565; background:url('//image.genie.co.kr/imageg/web/common/hor_line_1.gif') repeat-x 0 100%;}
+	.album-type-2:after {content:''; clear:both; display:block; height:0;}
+	.album-type-2 {display:inline-block;}
+.album-type-2 .album-item {position:relative; float:left; width:50%; height:130px; padding:20px 0 0 0; border-bottom:1px solid #dedede;}
+	.album-type-2 .album-item:after {content:''; clear:both; display:block; height:0;}
+	.album-type-2 .album-item {display:inline-block;}
+.album-type-2 .album-item .dumy {position:relative; min-height:110px; padding:0 20px 20px 135px;}
+	.album-type-2 .album-item .dumy:after {clear:both; display:block; height:0; content:'';}
+	.album-type-2 .album-item .dumy {display:inline-block;}
+.album-type-2 .album-thumb {position:absolute; left:0; top:0; margin-bottom:0;}
+.album-type-2 .info-cont {min-height:86px;}
+.album-type-2 .date {color:#999; display:block;}
+.album-type-2 .title {display:block; margin:2px 0 0; line-height:1; max-width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.album-type-2 .title a {font-weight:bold; line-height:18px;}
+.album-type-2 .title a:hover {text-decoration:underline;}
+.album-type-2 .title .event {display:inline-block;}
+.album-type-2 .artist {display:inline-block; vertical-align:middle; line-height:16px; max-width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.album-type-2 .artist:hover {text-decoration:underline;}
+.album-type-2 .total-song {display:block; margin:0 0 4px; line-height:15px; color:#999; padding:0 0 0 14px; background:url('//image.genie.co.kr/imageg/web/blt/total_song.gif') no-repeat 0 1px;}
+.album-type-2 .album-item .view {transition:opacity .3s; opacity:0; filter:alpha(opacity=0); position:absolute; bottom:23px; right:20px; font-size:11px; color:#666; padding:0 16px 0 5px; background:url('//image.genie.co.kr/imageg/web/blt/more_down.gif') no-repeat 100% 50%;}
+.album-type-2 .album-item .view:hover {text-decoration:underline;}
+.album-type-2 .album-item:hover .view {opacity:1; filter:alpha(opacity=100);}
+.album-type-2 .album-item .title-i {display:none; float:left;}
+.album-type-2 .album-item .title-song {display:none; float:right; width:280px; line-height:16px; padding:2px 0 0;}
+
+.album-type-2 .album-item.opened {z-index:15;}
+.album-type-2 .album-item.opened .dumy {background-color:#fff; height:auto;  border-bottom:2px solid #656565; box-shadow:0 3px 0 0 rgba(0,0,0,.1);}
+.album-item.opened .title a,
+.album-item.opened .artist {white-space:normal; text-overflow:clip; overflow:visible;}
+.album-item.opened .title-i,
+.album-item.opened .title-song {display:block;}
+.album-type-2 .album-item.opened .view {opacity:1; filter:alpha(opacity=100); bottom:23px;}
+.album-type-2 .album-item.opened .view {background-image:url('//image.genie.co.kr/imageg/web/blt/more_up.gif');}
+
+.album-type-2 .info-cont .cont:after {content:' '; display:block; visibility:hidden; clear:both;}
+.album-type-2 .info-cont .cont {display:inline-block;}
+.album-type-2 .album-item .dumy .button {position:absolute; left:136px; bottom:0; right:0; padding:10px 20px 20px 0; background-color:#fff;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.01) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.01)), color-stop(25%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%);
+}
+.album-type-2 .album-item .dumy .button .album-down {color:#666; font-size:11px; line-height:22px; letter-spacing:-1px; vertical-align:middle; display:inline-block; height:22px; padding:0 10px; border:1px solid #c7c7c7; border-radius:2px; background-color:#fff;}
+.album-type-2 .album-item .dumy .button .album-down:hover {border-color:#9f9f9f; background-color:#e1e1e1;}
+	.album-type-2 .album-item .dumy .button .toggle-button-box {margin-right:4px;}
+	.album-type-2 .album-item .dumy .button .toggle-button-box .title {text-overflow:clip; max-width:none;}
+
+
+.album-type-2 .album-item .dumy .button .album-down.notUse {border-color:#dadada;color:#dadada;cursor:default;}
+.album-type-2 .album-item .dumy .button .album-down.notUse:hover {background-color:#fff;}
+
+
+.album-type-2 .album-item .total-song,
+.album-type-2 .album-item .artist,
+.album-type-2 .album-item .title {transition:margin .15s;}
+.album-type-2 .album-item.opened .total-song,
+.album-type-2 .album-item.opened .artist,
+.album-type-2 .album-item.opened .title {margin-bottom:7px;}
+
+.close-bview {position:absolute; top:0; right:0; width:35px; height:35px; background-color:#444; font:0/0 a;}
+
+
+/* album thumb */
+.album-thumb {display:block; position:relative; margin:0 0 12px;}
+.album-thumb .cover {display:block; position:relative; width:110px; height:110px; padding:0 0 0 7px; cursor:pointer;}
+.album-thumb .cover img {width:100%;}
+.album-thumb:hover .cover {border:1px solid #999; padding:0; margin-left:7px; width:108px; height:108px; overflow:hidden;}
+.album-thumb:hover .cover img {position:relative; width:110px; height:110px; top:-1px; left:-1px;}
+.album-thumb .frame {position:absolute; top:0; left:0; width:117px; height:110px; background:url('//image.genie.co.kr/imageg/web/common/cover_1.png') no-repeat 0 0;}
+	* html .album-thumb .frame {width:7px;}
+.album-thumb .ranking_no {position:absolute;top:0;left:0;background-image:url('//image.genie.co.kr/imageg/web/chart/sp_ranking2.png');background-repeat:no-repeat;width:32px;height:44px;display:block;overflow:hidden;font-size:0;text-indent:-9999px;line-height:0;}
+.album-thumb .ranking_no.v1 {background-position:0 0;}
+.album-thumb .ranking_no.v2 {background-position:-32px 0;}
+.album-thumb .ranking_no.v3 {background-position:-64px 0;}
+.album-thumb .ranking_no.v4 {background-position:-96px 0;}
+.album-thumb .ranking_no.v5 {background-position:-128px 0;}
+/* .zoom_img{margin:-300px auto 0 -300px\9;} */
+
+.album2-thumb {display:block; position:relative; margin:0 0 6px;}
+.album2-thumb .cover {display:block; position:relative; width:200px; height:200px; padding:0 0 0 10px; cursor:pointer;}
+.album2-thumb .cover img {width:100%;}
+.album2-thumb:focus .cover {z-index:10;}
+.album2-thumb .frame {position:absolute; top:0; left:0; width:210px; height:200px; background:url('//image.genie.co.kr/imageg/web/common/cover_2.png') no-repeat 0 0;}
+	* html .album2-thumb .frame {width:10px;}
+.album2-thumb .ico_hq {position:absolute; top:-9px; left:-11px; width:72px; height:72px; background:url('//image.genie.co.kr/imageg/web/blt/ico_hq.png') no-repeat 0 0;z-index:6;font-size:0;line-height:0;}
+
+.album3-thumb {display:block; position:relative; margin:0 0 6px;}
+.album3-thumb .cover {display:block; position:relative; width:200px; height:200px; padding:0 0 0 10px; cursor:pointer;}
+.album3-thumb .cover img {width:100%;}
+.album3-thumb:focus .cover {z-index:10;}
+.album3-thumb .frame {position:absolute; top:0; left:0; width:210px; height:200px; background:url('//image.genie.co.kr/imageg/web/common/cover_2.png') no-repeat 0 0;}
+	* html .song-thumb .frame {width:11px;}
+/*
+.artist-like {width:220px; min-height:172px; margin-top:19px; padding:0 0 0 20px; border-left:1px solid #dedede;}
+.artist-like h3 {line-height:1em;}
+.artist-like ul {margin-top:14px;}
+.artist-like li {margin-top:11px; line-height:41px; overflow:hidden;}
+.artist-like li:first-child {margin-top:0;}
+.artist-like li p {float:left; width:41px; margin-right:12px;}
+.artist-like li p img {border:1px solid #dedede;}
+.artist-like li .icon {display:inline-block; vertical-align:middle;}
+.artist-like li .title {display:inline-block; color:#444; vertical-align:middle;}
+.artist-like li .title:hover {text-decoration:underline;}
+.artist-like div {padding:60px 0 0; text-align:center;}
+.artist-like div p {margin:0 0 5px; color:#999;}
+.artist-like div a {border:1px solid #CCCCCC; border-radius:3px 3px 3px 3px; color:#666666; display:inline-block; font-size:11px; height:22px; line-height:22px; padding:0 8px 0 4px; vertical-align:middle;}
+.artist-like div a:focus,
+.artist-like div a:hover {background-color:#FBFBFB; border-color:#9F9F9F;}
+.artist-like div a i {background:url("//image.genie.co.kr/imageg/web/btn/sns_1.png") no-repeat scroll 0 -44px transparent; display:inline-block; height:22px; vertical-align:middle; width:22px;}
+.artist-like div a:focus i,
+.artist-like div a:hover i {background-position:-22px -44px;}
+*/
+.daily-chart {width:238px; height:100%; border:1px solid #dedede;}
+.daily-chart .badge-wrap {position:relative; padding:9px 30px; background:#f0f0f0;}
+.daily-chart .badge-wrap #badge-navi a {font-size:0; line-height:0; position:absolute; top:0; z-index:2; width:23px; height:56px; background-image:url('//image.genie.co.kr/imageg/web/detail/navi_badge.gif');}
+.daily-chart .badge-wrap #badge-navi a.prev {left:0;}
+.daily-chart .badge-wrap #badge-navi a.prev.null {background-position:0 100%;}
+.daily-chart .badge-wrap #badge-navi a.next {right:0; background-position:100% 0;}
+.daily-chart .badge-wrap #badge-navi a.next.null {background-position:100% 100%;}
+.daily-chart .badge-rank li {float:left; width:38px; height:38px; margin-left:8px; background:url('//image.genie.co.kr/imageg/web/detail/bg_badge.gif') no-repeat;}
+.daily-chart .badge-rank li:first-child {margin-left:0;}
+.daily-chart .total {padding:7px 0 11px 0; border-bottom:1px solid #e9e9e9; overflow:hidden; text-align:center;}
+.daily-chart .total div {float:left; width:119px; height:38px; background:url('//image.genie.co.kr/imageg/web/detail/dotline.gif') no-repeat 0 6px;}
+.daily-chart .total div:first-child {background:none;}
+.daily-chart .total div p {font-size:20px; font-family:'Malgun Gothic', '맑은 고딕', 'Nanum Gothic', '나눔 고딕', dotum, sans-serif; line-height:23px;}
+.daily-chart .best-listener h3 {padding:15px 0 0 15px; line-height:1em;}
+.daily-chart .best-listener .bl-wrap {margin-top:8px; padding:0 15px;}
+.daily-chart .best-listener .comment {margin-left:-1px; padding:5px 0 12px; font-size:11px; color:#999; line-height:15px;  text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+.daily-chart .best-listener .text {padding:15px 0 45px; color:#999; text-align:center;}
+.daily-chart .best-listener .best {overflow:hidden;}
+.daily-chart .best-listener .best p {float:left; width:41px; margin-right:12px;}
+.daily-chart .best-listener .best p img {border:1px solid #dedede;}
+.daily-chart .best-listener .best .icon {display:inline-block; margin-bottom:1px; vertical-align:middle;}
+.daily-chart .best-listener .best .title {display:inline-block; color:#444; vertical-align:middle;}
+.daily-chart .best-listener .best .title:hover {text-decoration:underline;}
+.songlist-box .tit-box {margin-bottom:10px;}
+.songlist-box .album-none {margin:10px 0 0 0;padding:102px 0 79px 0;border-top:2px solid #656565;border-bottom:1px solid #dedede;text-align:center;color:#666;line-height:29px;}
+.songlist-box .album-none a {text-decoration:underline;color:#f68074;}
+
+@media print {
+	#wrap-head ,
+	#wrap-foot ,
+	.bread-sc ,
+	.page-top-this ,
+	.tab-1 ,
+	.song-main-infos ,
+	.hr ,
+	.comment-title ,
+	.page-comment ,
+	.rnt-cate ,
+	.tit-box ,
+	.btn-grp {display:none;}
+
+	.lyrics .lyrics-area {float:none; width:100%;}
+	.lyrics .lyrics-area pre div {font-size :16px; }
+	.lyrics .lyrics-area pre p {font-size:14px; line-height:1.6;}
+
+}
+
+.artist-main-chart {padding-bottom:35px;}
+.artist-main-chart:after {clear:both;content: "";display:block;}
+.chart_warp {position:relative;float:left;width:699px;}
+.chart_warp .box {border-top:1px solid #dedede;border-left:1px solid #dedede;border-bottom:1px solid #dedede;height:254px;background-color:#f6f6f6;padding:15px 20px;}
+.chart_warp .period {font-size:11px;color:#5c6479;padding:0 0 14px 0}
+.chart_warp .chart_tab {position:absolute;right:45px;top:10px;}
+.chart_warp .chart_tab.nonetip {right:20px;}
+.chart_warp .chart_tab li {float:left;border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;border-right:1px solid #dbdbdb;}
+.chart_warp .chart_tab li:first-child {border-left:1px solid #dbdbdb;border-radius:4px 0 0 4px;}
+.chart_warp .chart_tab li a {border-top:1px solid #fff;border-left:1px solid #fff;background-color:#f6f6f6;line-height:25px;height:25px;padding:0 16px 0 15px;display:block;color:#7e828e;}
+.chart_warp .chart_tab li.current a {background-color:#fff;color:#20283e;font-weight:bold;}
+.chart_warp .chart_tab li:first-child a {border-radius:4px 0 0 4px;}
+.chart_warp .chart_tab li.last {border-radius:0 4px 4px 0;}
+.chart_warp .chart_tab li.last a {border-radius:0 4px 4px 0;}
+.chart_warp .chart_tip {position:absolute;top:14px;right:20px;width:20px;height:20px;display:block;text-indent:-9999px;overflow:hidden;background:url('//image.genie.co.kr/imageg/web/detail/btn_qmk.png') no-repeat;}
+.recom_warp {float:left;width:241px;}
+.recom_warp dl {background-color:#fdfdfd;border-top:1px solid #dedede;border-left:1px solid #dedede;border-right:1px solid #dedede;padding-left:20px;}
+.recom_warp .recom_song {height:141px;}
+.recom_warp .recom_album {height:142px;border-bottom:1px solid #dedede;}
+.recom_warp dl dt {position:relative;padding:16px 18px 18px 0;line-height:100%;display:inline-block;}
+.recom_warp dl dt .tip {position:absolute;top:16px;right:0;height:14px;width:14px;background:url('//image.genie.co.kr/imageg/web/detail/btn_qmk_s.png') no-repeat;display:block;overflow:hidden;font-size:0;text-indent:-9999px;}
+.recom_warp dl dt > img {vertical-align:top;}
+.recom_warp dl dd {position:relative;padding:3px 10px 0 82px;}
+.recom_warp dl dd .cover {position:absolute;top:0;left:0;width:70px;height:70px;padding-left:4px;}
+.recom_warp dl dd .cover > img {width:70px;}
+.recom_warp dl dd .cover .cover_bg {position:absolute;top:0;left:0;width:74px;height:74px;background:url('//image.genie.co.kr/imageg/web/detail/bg_recom_cover.png') no-repeat;}
+.recom_warp dl dd .more-link {position:absolute;top:57px;right:16px;}
+.recom_warp dl dd .more-link a {font-size:11px;color:#999;}
+.recom_warp .aside_sns {border-top:1px solid #dedede;border-left:1px solid #dedede;border-right:1px solid #dedede;height:246px;background-color:#fdfdfd;}
+.recom_warp .aside_sns > h3 > img {vertical-align:top;}
+.recom_warp .aside_sns ul {padding-top:8px;}
+.recom_warp .aside_sns ul li:first-child {margin-top:0;}
+.recom_warp .aside_sns ul li {margin-top:13px;}
+
+
+/* 메타고도화 */
+.artist-member-released {padding:26px 0 25px 0;border-top:1px solid #dedede;}
+.artist-member-released .artist-member-list {width:100%;margin:0 0 0 0;overflow:hidden;}
+.artist-member-released .artist-member-list > ul {margin-left:-48px;margin-top:-2px;display:inline-block;height:100%;}
+.artist-member-released .artist-member-list > ul:after {clear:both;content: "";display:block;}
+.artist-member-released .artist-member-list > ul > li {position:relative;float:left;margin-left:48px;padding-top:16px;width:116px;height:142px;overflow:hidden;}
+.artist-member-released .artist-member-list > ul > li > a {display:inline-block;height:100%;width:100%;}
+.artist-member-released .artist-member-list > ul > li > a:hover .name {text-decoration:underline;}
+.artist-member-released .artist-member-list > ul > li .cover {position:relative;display:block;overflow:hidden;width:116px;height:116px;}
+.artist-member-released .artist-member-list > ul > li .cover .bg_cover {position:absolute;top:0;left:0;right:0;bottom:0;display:block;border:1px solid rgba(0,0,0,0.1);}
+.artist-member-released .artist-member-list > ul > li .cover img {width:100%;height:auto;}
+.artist-member-released .artist-member-list > ul > li .name {text-align:left;display:block;width:100%;font-size:12px;font-weight:bold;color:#444444;line-height:1.5;padding-top:8px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+
+.artist-group-released {padding:26px 0 25px 0;border-top:1px solid #dedede;}
+.artist-group-released .artist-group-list {width:100%;margin:0 0 0 0;overflow:hidden;}
+.artist-group-released .artist-group-list > ul {position:relative;margin-left:-48px;margin-top:-2px;display:inline-block;height:100%;}
+.artist-group-released .artist-group-list > ul:after {clear:both;content: "";display:block;}
+.artist-group-released .artist-group-list > ul > li {position:relative;float:left;margin-left:48px;padding-top:16px;width:116px;height:142px;overflow:hidden;}
+.artist-group-released .artist-group-list > ul > li > a {display:inline-block;height:100%;width:100%;}
+.artist-group-released .artist-group-list > ul > li > a:hover .group_name {text-decoration:underline;}
+.artist-group-released .artist-group-list > ul > li .cover {position:relative;display:block;overflow:hidden;width:116px;height:116px;}
+.artist-group-released .artist-group-list > ul > li .cover .bg_cover {position:absolute;top:0;left:0;right:0;bottom:0;display:block;border:1px solid rgba(0,0,0,0.1);}
+.artist-group-released .artist-group-list > ul > li .cover img {width:100%;height:auto;}
+.artist-group-released .artist-group-list > ul > li .group_name {text-align:left;display:block;width:100%;font-size:12px;font-weight:bold;color:#444444;line-height:1.5;padding-top:8px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+
+.artist-list-released {padding:2px 0 11px 0}
+
+
+.artist-list-released .help_txt {position:relative;}
+.artist-list-released .help_txt .btn_balloon {position:absolute;top:-22px;right:10px;font-size:12px;color:#999999;padding-right:18px;line-height:1.5;}
+.artist-list-released .help_txt .btn_balloon > a {position:absolute;right:0;top:1px;display:block;width:14px;height:14px;background:url('//image.genie.co.kr/imageg/web/blt/question.gif') 0 0 no-repeat;font-size:0;line-height:0;}
+.artist-list-released .help_txt .balloon {position:absolute;right:9px;top:-2px;display:none;background-color:#fff;width:212px;height:45px;padding:12px;text-align:center;border:1px solid #c7c7c7;z-index:10;}
+.artist-list-released .help_txt .balloon p {font-size:11px;line-height:15px;color:#999999;}
+.artist-list-released .help_txt .balloon .close {position:absolute;right:0;top:0;background:url('//image.genie.co.kr/imageg/web/btn/close_x.gif') no-repeat;width:21px;height:21px;text-indent:-9999px;overflow:hidden;}
+
+
+.artist-list-released .roll-nav {font-size:0; line-height:0; display:inline-block; vertical-align:top; margin-left:5px; margin-top:-1px; }
+.artist-list-released .artist-list > ul > li {position:relative;float:left;width:116px;height:142px;overflow:hidden;}
+.artist-list-released .artist-list > ul > li > a {display:inline-block;height:100%;width:100%;}
+.artist-list-released .artist-list > ul > li > a:hover .name {text-decoration:underline;}
+.artist-list-released .artist-list > ul > li .cover {position:relative;display:block;overflow:hidden;width:116px;height:116px;}
+.artist-list-released .artist-list > ul > li .cover .bg_cover {position:absolute;top:0;left:0;right:0;bottom:0;display:block;border:1px solid rgba(0,0,0,0.1);}
+.artist-list-released .artist-list > ul > li .cover img {width:100%;height:auto;}
+.artist-list-released .artist-list > ul > li .name {text-align:left;display:block;width:100%;font-size:12px;font-weight:bold;color:#444444;line-height:1.5;padding-top:8px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+
+
+.daily-chart-info {width:238px;height:100%;border:1px solid #dedede;background-color:#fdfdfd;}
+.daily-chart-info .chart-info {position:relative;padding:15px 9px 8px 18px;}
+.daily-chart-info .chart-info .more-link {position:absolute;top:15px;right:9px;}
+.daily-chart-info .chart-info .more-link a {padding-right:10px;font-size:11px;background-position:100% 3px}
+.daily-chart-info .chart-info dl.first-child {margin-top:13px;}
+.daily-chart-info .chart-info dl {position:relative;line-height:20px;}
+.daily-chart-info .chart-info dl:after {clear:both;content: "";display:block;}
+.daily-chart-info .chart-info dl dt {float:left;}
+.daily-chart-info .chart-info dl dt img {vertical-align:middle;display:inline-block;}
+.daily-chart-info .chart-info dl dd {position:absolute;right:0;top:0;height:20px;text-align:right;}
+.daily-chart-info .chart-info dl dd .num {vertical-align:top;font-family:'Tahoma';font-size:12px;font-weight:bold;line-height:18px;color:#4e4e4e;display:inline-block;padding-left:2px;padding-right:1px;}
+.daily-chart-info .chart-info dl dd img {vertical-align:middle;display:inline-block;}
+.daily-chart-info .chart-info dl dd .last_txt {padding-right:10px;}
+.daily-chart-info .chart-info dl dd .link .last_txt {padding-right:10px;background:url('//image.genie.co.kr/imageg/web/blt/more_2.gif') no-repeat 100% 2px;}
+
+
+.daily-chart-info .total {padding:15px 0 11px 0;overflow:hidden; text-align:center;border-top:1px solid #e9e9e9;}
+
+.daily-chart-info .total > h3 {height:14px;padding:0 18px 6px;line-height:0;vertical-align:top;text-align:left;}
+
+.daily-chart-info .total div {float:left; width:119px; height:38px; background:url('//image.genie.co.kr/imageg/web/detail/dotline.gif') no-repeat 0 6px;}
+.daily-chart-info .total div.first-child {background:none;}
+.daily-chart-info .total div p {font-size:18px;font-weight:bold;font-family:'Tahoma';line-height:23px;}
+
+
+.aside_listener {border-bottom:1px solid #dedede;padding:19px;}
+.aside_listener .bl-wrap {padding-top:13px;}
+.aside_listener .comment {margin-left:-1px; padding:5px 0 0; font-size:11px; color:#999; line-height:15px;  text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+.aside_listener .text {color:#999; text-align:center;}
+.aside_listener .best {overflow:hidden;}
+.aside_listener .best p {float:left; width:41px; margin-right:12px;}
+.aside_listener .best p img {border:1px solid #dedede;}
+.aside_listener .best .icon {margin-top:2px;display:inline-block; margin-bottom:1px; vertical-align:middle;}
+.aside_listener .best .title {margin-top:2px;display:inline-block; color:#444; vertical-align:middle;}
+.aside_listener .best .title:hover {text-decoration:underline;}
+
+
+.artist-group-released .desc-cont_2 {position:relative; height:158px;overflow:hidden;}
+.artist-group-released .desc-cont_2 .db-insert_2 {height:auto;}
+.artist-group-released .desc-expand_2 {margin:34px 0 -12px; text-align:right;}
+.artist-group-released .fade-hide {display:block; position:absolute; bottom:0; height:20px; width:100%; background:url('//image.genie.co.kr/imageg/web/common/fade_hide.png') repeat-x 0 0;}
+
+/*190220 매거진 전체보기 블릿*/
+.artist-edm-released .more-link a{background: url(//image.genie.co.kr/imageg/web/blt/more_down.gif) no-repeat 100% 50%;}
+.artist-edm-released .more-link a.opened{background: url(//image.genie.co.kr/imageg/web/blt/more_up.gif) no-repeat 100% 50%;}
